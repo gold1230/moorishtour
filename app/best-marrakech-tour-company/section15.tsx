@@ -1,9 +1,9 @@
 import Link from "next/link";
-import PlaceHoverCard from "@/Compentents/placeCard";
-import {SectionFrame,InfoPanel,FeatureCards,Checklist,Timeline,QuotePanel,CompareTable,ArticleCTA} from "./ArticleElements";
-import ArticlePhoto from "./ArticlePhoto";
+
+import { SectionFrame, InfoPanel, CompareTable } from "./ArticleElements";
+
 import {tables} from "./tables";
-import {faqs} from "./faqData";
+
 export default function Section15(){return <SectionFrame id="marrakech-tour-company-pricing" index={15} label="BUDGET CLEARLY" title="Marrakech Tour Prices: What Changes the Cost?">
 <p className="mt-5 text-[17px] leading-8 text-slate-700">Tour prices are not fixed across every season or travel style. A private trip for two travelers uses transport differently from a group departure, while the number and standard of hotel rooms also change the quote. Desert camps vary in their facilities and location, and optional activities can add expenses. This is why comparing only the price printed at the top of a page can be misleading.</p>
 <p className="mt-5 text-[17px] leading-8 text-slate-700">Ask whether accommodation is in a standard hotel, traditional riad or desert camp and whether you can see examples before confirming. Also check meals. A package may include breakfast and one or two dinners while leaving lunches, drinks and entry tickets as separate costs. A city tour may charge guiding and monument tickets separately. These details should be shown plainly.</p>

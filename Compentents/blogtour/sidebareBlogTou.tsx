@@ -337,12 +337,6 @@ export default function BlogSidebar({
 
                 aria-label="Search blog articles"
 
-                aria-expanded={
-                  searchOpen
-                }
-
-                aria-controls="blog-search-results"
-
                 className="
                   min-w-0
                   flex-1

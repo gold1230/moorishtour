@@ -81,7 +81,7 @@ export default function AchievementsCTA() {
       </Link>
 
       <a
-        href="tel:+212612345678"
+        href="tel:+212628812520"
         className="flex items-center gap-1.75 font-sans text-[14px] font-semibold tracking-[0.4px] text-white no-underline"
       >
         <svg
@@ -99,7 +99,7 @@ export default function AchievementsCTA() {
           />
         </svg>
 
-        <span>+212 6 1234 5678</span>
+        <span>+212628812520</span>
       </a>
     </div>
   </div>

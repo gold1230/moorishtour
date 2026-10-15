@@ -1,9 +1,9 @@
-import Link from "next/link";
+
 import PlaceHoverCard from "@/Compentents/placeCard";
-import {SectionFrame,InfoPanel,FeatureCards,Checklist,Timeline,QuotePanel,CompareTable,ArticleCTA} from "./ArticleElements";
+import { SectionFrame, InfoPanel } from "./ArticleElements";
 import ArticlePhoto from "./ArticlePhoto";
-import {tables} from "./tables";
-import {faqs} from "./faqData";
+
+
 export default function Section6(){return <SectionFrame id="marrakech-atlas-mountains-day-trip" index={6} label="MOUNTAIN ESCAPE" title="Atlas Mountains Day Trips from Marrakech">
 <p className="mt-5 text-[17px] leading-8 text-slate-700">A mountain excursion gives you a very different view of southern <PlaceHoverCard place="high-atlas-mountains">High Atlas Mountains</PlaceHoverCard>. In a relatively short drive from the city, flat landscapes rise into valleys, stone villages and mountain paths. Depending on the chosen destination, a tour might include viewpoints, a gentle walk, a local lunch or time to learn about Amazigh village life. The aim should be to enjoy the setting, not collect as many stops as possible.</p>
 <p className="mt-5 text-[17px] leading-8 text-slate-700">Imlil is a popular base for mountain walks, while other valleys suit travelers who prefer a scenic drive and short stops. Hiking difficulty varies significantly. Before booking, explain your group&apos;s walking ability, footwear and whether any children or older travelers are joining. A “small hike” can mean different things to different people, especially at altitude.</p>

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import HoverCard from "@/Compentents/hovercard";
+
 
 
 import TiziNtichkaImage from "@/public/blog/content/mountain-road-through-tizi-n-tichka-pass-in-the-high-atlas-mountains.jpg";

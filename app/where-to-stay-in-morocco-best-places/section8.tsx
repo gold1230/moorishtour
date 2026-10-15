@@ -5,12 +5,7 @@ import PlaceHoverCard from "@/Compentents/placeCard";
 
 import MarrakechToFes4DayHero from "@/public/tours/related/4-days-tour-from-marrakech-to-fes.jpg";
 
-import {
-  CheckCircleIcon,
-  MapPinIcon,
-  QuestionMarkCircleIcon,
-  SparklesIcon,
-} from "@heroicons/react/24/outline";
+import { CheckCircleIcon, MapPinIcon, QuestionMarkCircleIcon } from "@heroicons/react/24/outline";
 
 export default function Section8() {
   const faqSchema = {

@@ -124,7 +124,7 @@ export default function Headertour({
               LOGO
           ================================================= */}
 
-          <Link
+          <Link prefetch={false}
             href="/"
             className="shrink-0"
             aria-label="Moorish Tour home"
@@ -154,7 +154,7 @@ export default function Headertour({
                   ));
 
               return (
-                <Link
+                <Link prefetch={false}
                   key={item.name}
                   href={item.href}
                   className={`relative mx-1 px-4 py-2.5 text-sm font-semibold transition ${
@@ -178,7 +178,7 @@ export default function Headertour({
             })}
 
             {/* Plan Your Tour */}
-            <Link
+            <Link prefetch={false}
               href="/plan-your-morocco-tour"
               className="ml-4 inline-flex h-11 items-center justify-center rounded-lg bg-amber-600 px-5 text-sm font-semibold text-white shadow-sm transition hover:bg-amber-700"
             >
@@ -217,7 +217,7 @@ export default function Headertour({
         >
           {/* Mobile top bar */}
           <div className="flex h-18.5 items-center justify-between border-b border-white/10 px-5">
-            <Link
+            <Link prefetch={false}
               href="/"
               onClick={() =>
                 setMobileMenuOpen(false)
@@ -256,7 +256,7 @@ export default function Headertour({
                   ));
 
               return (
-                <Link
+                <Link prefetch={false}
                   key={item.name}
                   href={item.href}
                   onClick={() =>
@@ -274,7 +274,7 @@ export default function Headertour({
             })}
 
             {/* CTA */}
-            <Link
+            <Link prefetch={false}
               href="/plan-your-morocco-tour"
               onClick={() =>
                 setMobileMenuOpen(false)
@@ -286,10 +286,10 @@ export default function Headertour({
 
             {/* Phone */}
             <a
-              href="tel:+212612345678"
+              href="tel:+212628812520"
               className="mt-5 text-center text-base font-medium text-white/80 transition hover:text-white"
             >
-              +212 6 1234 5678
+              +212628812520
             </a>
           </div>
         </div>

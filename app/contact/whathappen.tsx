@@ -1,16 +1,7 @@
 "use client";
 
-import Link from "next/link";
-import {
-  DocumentTextIcon,
-  ChatBubbleLeftRightIcon,
-  MapIcon,
-  CheckCircleIcon,
-  LightBulbIcon,
-  ClockIcon,
-  UserGroupIcon,
-  ShieldCheckIcon,
-} from "@heroicons/react/24/outline";
+
+import { DocumentTextIcon, ChatBubbleLeftRightIcon, MapIcon, CheckCircleIcon, LightBulbIcon, ClockIcon, UserGroupIcon } from "@heroicons/react/24/outline";
 
 const inquirySteps = [
   {

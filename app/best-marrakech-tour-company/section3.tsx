@@ -1,9 +1,9 @@
 import Link from "next/link";
-import PlaceHoverCard from "@/Compentents/placeCard";
-import {SectionFrame,InfoPanel,FeatureCards,Checklist,Timeline,QuotePanel,CompareTable,ArticleCTA} from "./ArticleElements";
-import ArticlePhoto from "./ArticlePhoto";
+
+import { SectionFrame, InfoPanel, CompareTable } from "./ArticleElements";
+
 import {tables} from "./tables";
-import {faqs} from "./faqData";
+
 export default function Section3(){return <SectionFrame id="how-to-find-trusted-marrakech-travel-company" index={3} label="BOOK WITH CONFIDENCE" title="How to Choose a Trusted Marrakech Travel Company">
 <p className="mt-5 text-[17px] leading-8 text-slate-700">Start with the written plan rather than the words “best” or “luxury” in an advertisement. Look for a day-by-day itinerary showing the departure point, overnight towns, key stops, and when you return. If a company promises a very long list of cities in only a few days, ask how much time will actually be spent driving. The answer may change which package you choose.</p>
 <p className="mt-5 text-[17px] leading-8 text-slate-700">Look closely at what is included. Does the price cover the airport transfer, private driver, city guide, accommodation and entrance tickets? Are lunches, tips and optional desert activities extra? A room described as a luxury desert tent might have a private bathroom, but that should be confirmed for the specific booking. Make sure you also know how any deposit, remaining balance and cancellation rules work.</p>

@@ -1,9 +1,9 @@
 import Link from "next/link";
 import PlaceHoverCard from "@/Compentents/placeCard";
-import {SectionFrame,InfoPanel,FeatureCards,Checklist,Timeline,QuotePanel,CompareTable,ArticleCTA} from "./ArticleElements";
+import { SectionFrame, Timeline } from "./ArticleElements";
 import ArticlePhoto from "./ArticlePhoto";
-import {tables} from "./tables";
-import {faqs} from "./faqData";
+
+
 export default function Section8(){return <SectionFrame id="three-day-marrakech-merzouga-tour" index={8} label="SAHARA CLASSIC" title="3-Day Marrakech to Merzouga Desert Tour: What Really Happens?">
 <p className="mt-5 text-[17px] leading-8 text-slate-700">The classic three-day desert journey begins early, leaving Marrakech toward the High Atlas. You cross a mountain pass, see changing scenery, and often visit <PlaceHoverCard place="ait-ben-haddou">Ait Ben Haddou</PlaceHoverCard> before continuing toward a valley for the first night. This first day is part of the adventure, but there can be many hours in the vehicle. Regular breaks help, although they do not make the distances disappear.</p>
 <p className="mt-5 text-[17px] leading-8 text-slate-700">On the second day, a typical route continues through places such as <PlaceHoverCard place="dades-valley">Dades Valley</PlaceHoverCard> and <PlaceHoverCard place="todra-gorge">Todra Gorge</PlaceHoverCard>, depending on the exact package. You eventually reach the sandy landscape around Erg Chebbi. A camel trek or arranged 4×4 transfer may take you toward the camp, followed by dinner and a quiet night. Activities vary by operator, and extra experiences such as quad biking should never be assumed included.</p>

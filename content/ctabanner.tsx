@@ -6,7 +6,7 @@ import {
   CheckCircleIcon,
 } from "@heroicons/react/24/solid";
 
-import Abdou from "@/public/abdou-faiz-mBo2EUfJ7sY-unsplash.jpg";
+import Abdou from "@/public/abdou-faiz-morocco-destinations.webp";
 
 export default function CTABanner() {
   return (
@@ -104,9 +104,9 @@ export default function CTABanner() {
           <div className="mt-8 flex flex-wrap gap-4">
 
             {/* Main CTA */}
-            <Link
+            <Link prefetch={false}
               href="/plan-your-morocco-tour"
-              className="group inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-amber-600 px-6 text-base font-semibold text-white shadow-lg transition duration-300 hover:-translate-y-0.5 hover:bg-amber-700"
+              className="group inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-amber-700 px-6 text-base font-semibold text-white shadow-lg transition duration-300 hover:-translate-y-0.5 hover:bg-amber-800"
             >
               Plan Your Morocco Tour
 
@@ -118,7 +118,7 @@ export default function CTABanner() {
 
             {/* WhatsApp */}
             <a
-              href="https://wa.me/212661000064"
+              href="https://wa.me/212628812520"
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex h-12 items-center justify-center gap-2 rounded-lg border border-white/50 bg-white/10 px-6 text-base font-semibold text-white backdrop-blur-sm transition duration-300 hover:bg-white hover:text-slate-900"

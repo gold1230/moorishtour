@@ -100,11 +100,11 @@ export default function WhySection() {
 
               {/* Decorative line */}
               <div className="mt-4 flex items-center gap-2">
-                <span className="h-0.5 w-8 bg-amber-600" />
+                <span className="h-0.5 w-8 bg-amber-700" />
 
                 <span className="h-2 w-2 rotate-45 border border-amber-600 bg-white" />
 
-                <span className="h-0.5 w-8 bg-amber-600" />
+                <span className="h-0.5 w-8 bg-amber-700" />
               </div>
 
               {/* Description */}
@@ -158,9 +158,9 @@ export default function WhySection() {
               {/* CTA buttons */}
               <div className="mt-7 flex flex-wrap gap-3">
 
-                <Link
+                <Link prefetch={false}
                   href="/about"
-                  className="group inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-amber-600 px-6 text-base font-semibold text-white shadow-sm transition hover:bg-amber-700"
+                  className="group inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-amber-700 px-6 text-base font-semibold text-white shadow-sm transition hover:bg-amber-800"
                 >
                   Learn More About Us
 
@@ -170,7 +170,7 @@ export default function WhySection() {
                   />
                 </Link>
 
-                <Link
+                <Link prefetch={false}
                   href="/plan-your-morocco-tour"
                   className="group inline-flex h-12 items-center justify-center gap-2 rounded-lg border border-gray-300 bg-white px-6 text-base font-semibold text-slate-900 transition hover:border-amber-500 hover:text-amber-700"
                 >
@@ -199,7 +199,7 @@ export default function WhySection() {
                     className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-amber-200 hover:shadow-lg"
                   >
                     {/* Icon */}
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-amber-50 transition group-hover:bg-amber-600">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-amber-50 transition group-hover:bg-amber-800">
                       <Icon
                         className="h-6 w-6 text-amber-600 transition group-hover:text-white"
                         aria-hidden="true"

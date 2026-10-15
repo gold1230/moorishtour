@@ -21,19 +21,7 @@ import YouMayAlsoLike from "@/Compentents/tour/youmaylike";
 
 import type { Metadata } from "next";
 
-import {
-  SunIcon,
-  CameraIcon,
-  ShieldCheckIcon,
-  BeakerIcon,
-  BackwardIcon,
-  MapIcon,
-  BuildingLibraryIcon,
-  HomeModernIcon,
-  FireIcon,
-  BriefcaseIcon,
-  BoltIcon,
-} from "@heroicons/react/24/solid";
+import { SunIcon, CameraIcon, ShieldCheckIcon, BeakerIcon, BackwardIcon, MapIcon, BuildingLibraryIcon, FireIcon, BriefcaseIcon, BoltIcon } from "@heroicons/react/24/solid";
 
 /* -------------------------------------------------------------------------- */
 /*                               MAIN TOUR DATA                               */

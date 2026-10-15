@@ -1,9 +1,9 @@
-import Link from "next/link";
-import PlaceHoverCard from "@/Compentents/placeCard";
-import {SectionFrame,InfoPanel,FeatureCards,Checklist,Timeline,QuotePanel,CompareTable,ArticleCTA} from "./ArticleElements";
-import ArticlePhoto from "./ArticlePhoto";
-import {tables} from "./tables";
-import {faqs} from "./faqData";
+
+
+import { SectionFrame, Checklist } from "./ArticleElements";
+
+
+
 export default function Section19(){return <SectionFrame id="transport-airport-pickup-marrakech" index={19} label="EASY ARRIVAL" title="Airport Transfers, Drivers and Getting Around Marrakech">
 <p className="mt-5 text-[17px] leading-8 text-slate-700">Arriving in Marrakech can be easier when you know where to meet your driver and how to reach your accommodation. Many riads are inside the medina, where cars cannot always enter narrow lanes. Ask the hotel or tour company whether you will walk the final stretch and who will help with luggage. This small detail is especially useful after a late flight.</p>
 <p className="mt-5 text-[17px] leading-8 text-slate-700">For city visits, a walking guide may be more useful than a vehicle for much of the old town. Outside the center, transport may be helpful for gardens, day trips or longer road journeys. A private driver can add flexibility, but confirm driving hours, pickup point and whether the service is a transfer or a guided sightseeing day.</p>

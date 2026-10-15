@@ -1,9 +1,9 @@
 import Link from "next/link";
-import PlaceHoverCard from "@/Compentents/placeCard";
-import {SectionFrame,InfoPanel,FeatureCards,Checklist,Timeline,QuotePanel,CompareTable,ArticleCTA} from "./ArticleElements";
-import ArticlePhoto from "./ArticlePhoto";
+
+import { SectionFrame, CompareTable } from "./ArticleElements";
+
 import {tables} from "./tables";
-import {faqs} from "./faqData";
+
 export default function Section16(){return <SectionFrame id="best-time-for-marrakech-tours" index={16} label="SEASONS & WEATHER" title="Best Time to Book Marrakech Tours">
 <p className="mt-5 text-[17px] leading-8 text-slate-700">Spring and autumn are popular times for Marrakech sightseeing because daytime weather is often more comfortable for walking through markets and gardens. In the summer, afternoons can become very hot, so early visits, shade and a well-timed rest make a difference. A good schedule gives you a way to enjoy the city without spending the hottest hours in long queues.</p>
 <p className="mt-5 text-[17px] leading-8 text-slate-700">In winter, Marrakech can have pleasant daytime sightseeing conditions, but mornings and evenings may be cool. If your tour continues toward the Atlas Mountains, snow and changing weather can affect high mountain roads. Desert nights can also be cold, even when the daytime sun feels warm. Pack layers and confirm that overnight accommodation is appropriate for the season.</p>

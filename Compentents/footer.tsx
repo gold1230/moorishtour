@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
 
@@ -11,6 +9,7 @@ import {
 } from "@heroicons/react/24/solid";
 
 import MoorishLogo from "@/public/moorishtours3white.png";
+import SocialLinks from "@/Compentents/SocialLinks";
 
 
 const tourLinks = [
@@ -107,7 +106,7 @@ export default function Footer() {
           ================================================= */}
           <div>
 
-            <Link
+            <Link prefetch={false}
               href="/"
               className="inline-flex"
               aria-label="Moorish Tour - Morocco Tour Operator"
@@ -130,9 +129,9 @@ export default function Footer() {
             </p>
 
             {/* Quick CTA */}
-            <Link
+            <Link prefetch={false}
               href="/plan-your-morocco-tour"
-              className="mt-6 inline-flex items-center gap-2 rounded-lg bg-amber-600 px-5 py-3 text-base font-semibold text-white transition hover:bg-amber-700"
+              className="mt-6 inline-flex items-center gap-2 rounded-lg bg-amber-700 px-5 py-3 text-base font-semibold text-white transition hover:bg-amber-800"
             >
               Plan Your Morocco Tour
 
@@ -160,7 +159,7 @@ export default function Footer() {
 
               {tourLinks.map((item) => (
                 <li key={item.href}>
-                  <Link
+                  <Link prefetch={false}
                     href={item.href}
                     className="text-base text-gray-300 transition hover:text-amber-600"
                   >
@@ -189,7 +188,7 @@ export default function Footer() {
 
               {destinationLinks.map((item) => (
                 <li key={item.href}>
-                  <Link
+                  <Link prefetch={false}
                     href={item.href}
                     className="text-base text-gray-300 transition hover:text-amber-600"
                   >
@@ -218,7 +217,7 @@ export default function Footer() {
 
               {usefulLinks.map((item) => (
                 <li key={item.href}>
-                  <Link
+                  <Link prefetch={false}
                     href={item.href}
                     className="text-base text-gray-300 transition hover:text-amber-500"
                   >
@@ -243,7 +242,7 @@ export default function Footer() {
 
               {/* Phone */}
               <a
-                href="tel:+212661000064"
+                href="tel:+212628812520"
                 className="flex items-start gap-3 text-base text-gray-300 transition hover:text-amber-600"
               >
                 <PhoneIcon
@@ -252,7 +251,7 @@ export default function Footer() {
                 />
 
                 <span>
-                  +212 661 00 00 64
+                  +212628812520
                 </span>
               </a>
 
@@ -287,13 +286,15 @@ export default function Footer() {
 
             {/* WhatsApp */}
             <a
-              href="https://wa.me/212661000064"
+              href="https://wa.me/212628812520"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center justify-center rounded-lg bg-amber-600 px-5 py-3 text-base font-semibold text-white transition hover:bg-amber-700"
+              className="mt-6 inline-flex items-center justify-center rounded-lg bg-amber-700 px-5 py-3 text-base font-semibold text-white transition hover:bg-amber-800"
             >
               Chat on WhatsApp
             </a>
+
+            <SocialLinks variant="footer" />
 
           </div>
 
@@ -318,7 +319,7 @@ export default function Footer() {
               </p>
             </div>
 
-            <Link
+            <Link prefetch={false}
               href="/tour"
               className="inline-flex shrink-0 items-center gap-2 text-base font-semibold text-amber-600 transition hover:text-amber-700"
             >
@@ -348,21 +349,21 @@ export default function Footer() {
               aria-label="Legal navigation"
               className="flex flex-wrap gap-x-5 gap-y-2"
             >
-              <Link
+              <Link prefetch={false}
                 href="/privacy-policy"
                 className="transition hover:text-amber-600"
               >
                 Privacy Policy
               </Link>
 
-              <Link
+              <Link prefetch={false}
                 href="/terms-and-conditions"
                 className="transition hover:text-amber-600"
               >
                 Terms &amp; Conditions
               </Link>
 
-              <Link
+              <Link prefetch={false}
                 href="/cookie-policy"
                 className="transition hover:text-amber-600"
               >

@@ -1,9 +1,9 @@
 import Link from "next/link";
-import PlaceHoverCard from "@/Compentents/placeCard";
-import {SectionFrame,InfoPanel,FeatureCards,Checklist,Timeline,QuotePanel,CompareTable,ArticleCTA} from "./ArticleElements";
+
+import { SectionFrame, Checklist } from "./ArticleElements";
 import ArticlePhoto from "./ArticlePhoto";
-import {tables} from "./tables";
-import {faqs} from "./faqData";
+
+
 export default function Section4(){return <SectionFrame id="best-marrakech-city-tours" index={4} label="DISCOVER THE RED CITY" title="Best Marrakech City Tours: Medina, Palaces and Souks">
 <p className="mt-5 text-[17px] leading-8 text-slate-700">A guided walk through Marrakech is a good introduction to the city. The old medina feels like a living maze, with small workshops, historic gates, market streets and quiet courtyards hidden behind busy lanes. A knowledgeable guide can help you understand why the area grew this way and how its crafts and everyday routines continue today.</p>
 <p className="mt-5 text-[17px] leading-8 text-slate-700">The famous Jemaa el-Fnaa square changes character through the day. Early visits feel different from a lively evening when food stalls and performers attract crowds. Around the Koutoubia Mosque, visitors can enjoy the tower and surrounding gardens from outside. Non-Muslim travelers cannot normally enter this working mosque, so a responsible guide should not promise an interior visit.</p>

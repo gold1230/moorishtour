@@ -16,7 +16,6 @@ export default function UploadReference({
 }: TourPlannerComponentProps) {
   const inputRef = useRef<HTMLInputElement | null>(null);
 
-  const [files, setFiles] = useState<File[]>([]);
   const [isDragging, setIsDragging] = useState(false);
 
   const handleFiles = (selectedFiles: FileList | null) => {

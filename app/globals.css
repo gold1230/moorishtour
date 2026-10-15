@@ -17,3 +17,29 @@
   --navbar-height: 80px;
 }
 
+
+/* Below-the-fold homepage sections do not need initial layout/paint work.
+   Chrome remembers actual sizes after the first render. */
+@supports (content-visibility: auto) {
+  main[data-page-type="homepage"] > :is(#traveler-reviews, #why-moorish-tour, #morocco-travel-guides, #plan-your-morocco-trip) {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 760px;
+  }
+}
+
+/* Native scroll-driven control, no hydration or scroll listener needed. */
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+@keyframes reveal-scroll-to-top {
+  from { opacity: 0; visibility: hidden; }
+  to   { opacity: 1; visibility: visible; }
+}
+@supports (animation-timeline: scroll()) {
+  .scroll-to-top {
+    animation: reveal-scroll-to-top linear both;
+    animation-timeline: scroll(root block);
+    animation-range: 300px 550px;
+  }
+}

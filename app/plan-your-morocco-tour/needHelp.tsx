@@ -42,12 +42,12 @@ export default function NeedHelp() {
           <p className="text-base leading-6 text-slate-800">
             <span className="font-bold">WhatsApp:</span>{" "}
             <Link
-              href="https://wa.me/212XXXXXXXXX"
+              href="https://wa.me/212628812520"
               target="_blank"
               rel="noopener noreferrer"
               className="underline decoration-gray-400 underline-offset-2 transition hover:text-amber-600"
             >
-              +212 6 12 34 56 78
+              +212628812520
             </Link>
           </p>
         </div>

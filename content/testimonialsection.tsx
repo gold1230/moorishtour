@@ -70,11 +70,11 @@ export default function TestimonialsSection() {
             {/* Small label */}
             <div className="flex items-center gap-2">
               <ChatBubbleLeftRightIcon
-                className="h-5 w-5 text-amber-600"
+                className="h-5 w-5 text-amber-700"
                 aria-hidden="true"
               />
 
-              <p className="text-sm font-bold uppercase tracking-[0.14em] text-amber-600">
+              <p className="text-sm font-bold uppercase tracking-[0.14em] text-amber-700">
                 Traveler Reviews
               </p>
             </div>
@@ -85,18 +85,18 @@ export default function TestimonialsSection() {
               className="mt-2 text-3xl font-bold leading-tight text-slate-900 sm:text-4xl"
             >
               What Travelers Say About Our{" "}
-              <span className="text-amber-600">
+              <span className="text-amber-700">
                 Morocco Tours
               </span>
             </h2>
 
             {/* Decorative line */}
             <div className="mt-3 flex items-center gap-2">
-              <span className="h-0.5 w-8 bg-amber-600" />
+              <span className="h-0.5 w-8 bg-amber-700" />
 
               <span className="h-2 w-2 rotate-45 border border-amber-600 bg-white" />
 
-              <span className="h-0.5 w-8 bg-amber-600" />
+              <span className="h-0.5 w-8 bg-amber-700" />
             </div>
 
             {/* Description */}
@@ -112,7 +112,7 @@ export default function TestimonialsSection() {
             href="https://www.tripadvisor.com/Attraction_Review-g293733-d27417833-Reviews-Moorish_Tour-Fez_Fez_Meknes.html"
             target="_blank"
             rel="noopener noreferrer"
-            className="group hidden shrink-0 items-center gap-2 text-base font-semibold text-amber-600 transition hover:text-amber-700 md:inline-flex"
+            className="group hidden shrink-0 items-center gap-2 text-base font-semibold text-amber-700 transition hover:text-amber-700 md:inline-flex"
           >
             View All Reviews
 
@@ -142,6 +142,7 @@ export default function TestimonialsSection() {
                 {/* Stars */}
                 <div
                   className="flex items-center gap-1"
+                  role="img"
                   aria-label={`${review.rating} out of 5 stars`}
                 >
                   {Array.from({
@@ -251,7 +252,7 @@ export default function TestimonialsSection() {
             href="https://www.tripadvisor.com/Attraction_Review-g293733-d27417833-Reviews-Moorish_Tour-Fez_Fez_Meknes.html"
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-2 text-base font-semibold text-amber-600 transition hover:text-amber-700"
+            className="group inline-flex items-center gap-2 text-base font-semibold text-amber-700 transition hover:text-amber-700"
           >
             Visit Tripadvisor
 
@@ -269,7 +270,7 @@ export default function TestimonialsSection() {
             href="https://www.tripadvisor.com/Attraction_Review-g293733-d27417833-Reviews-Moorish_Tour-Fez_Fez_Meknes.html"
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-amber-600 px-6 text-base font-semibold text-white transition hover:bg-amber-700"
+            className="group inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-amber-700 px-6 text-base font-semibold text-white transition hover:bg-amber-800"
           >
             View All Reviews
 

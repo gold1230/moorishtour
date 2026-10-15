@@ -10,7 +10,7 @@ import {
   StarIcon
   
 } from "@heroicons/react/24/solid";
-import BookingForm from "@/Compentents/contact/ContactFormBooking";
+
 import Breadcrumb from "@/Compentents/tour/Breadcrumb";
 
 
@@ -45,7 +45,6 @@ export default function TourHero(
   title,
   description,
   duration,
-  price,
   route, 
   reviews,
   reviewsRate,

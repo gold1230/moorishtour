@@ -25,24 +25,24 @@ const contactDetails = [
     title: "Call or WhatsApp",
     content: (
       <>
-        <span className="block">+212 6 XX XX XX XX</span>
+        <span className="block">+212628812520</span>
         <span className="block">We&apos;re available 24/7.</span>
       </>
     ),
     icon: PhoneIcon,
-    href: "tel:+212XXXXXXXXX",
+    href: "tel:+212628812520",
   },
   {
     title: "Email Us",
     content: (
       <>
-        <span className="block">info@moorishtour.com</span>
+        <span className="block">moorishtour@gmail.com</span>
         <span className="block">We aim to reply within</span>
         <span className="block">24 hours.</span>
       </>
     ),
     icon: EnvelopeIcon,
-    href: "mailto:info@moorishtour.com",
+    href: "mailto:moorishtour@gmail.com",
   },
   {
     title: "Opening Hours",

@@ -1,9 +1,9 @@
-import Link from "next/link";
-import PlaceHoverCard from "@/Compentents/placeCard";
-import {SectionFrame,InfoPanel,FeatureCards,Checklist,Timeline,QuotePanel,CompareTable,ArticleCTA} from "./ArticleElements";
-import ArticlePhoto from "./ArticlePhoto";
-import {tables} from "./tables";
-import {faqs} from "./faqData";
+
+
+import { SectionFrame, QuotePanel } from "./ArticleElements";
+
+
+
 export default function Section21(){return <SectionFrame id="responsible-safe-marrakech-tours" index={21} label="TRAVEL THOUGHTFULLY" title="Comfort, Safety and Respectful Travel in Marrakech">
 <p className="mt-5 text-[17px] leading-8 text-slate-700">Good travel planning includes ordinary safety habits. Keep your booking details and emergency contacts easy to find, look after your belongings in crowded places and use transport arrangements you understand. Marrakech is welcoming to many visitors, but no city or tour is completely without risk. Pay attention to local conditions and avoid ignoring your own comfort simply to keep to a schedule.</p>
 <p className="mt-5 text-[17px] leading-8 text-slate-700">When touring the medina, dress in a way that feels comfortable and respectful of the places you visit. Ask before photographing people, especially in workshops and markets. Religious sites may have specific access rules. If your guide suggests a stop that does not interest you, you should be able to say no politely without pressure.</p>

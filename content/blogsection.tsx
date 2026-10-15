@@ -51,11 +51,11 @@ export default function BlogSection() {
             {/* Small label */}
             <div className="flex items-center gap-2">
               <BookOpenIcon
-                className="h-5 w-5 text-amber-600"
+                className="h-5 w-5 text-amber-700"
                 aria-hidden="true"
               />
 
-              <p className="text-sm font-bold uppercase tracking-[0.14em] text-amber-600">
+              <p className="text-sm font-bold uppercase tracking-[0.14em] text-amber-700">
                 Morocco Travel Blog
               </p>
             </div>
@@ -66,18 +66,18 @@ export default function BlogSection() {
               className="mt-2 text-3xl font-bold leading-tight text-slate-900 sm:text-4xl"
             >
               Morocco Travel{" "}
-              <span className="text-amber-600">
+              <span className="text-amber-700">
                 Guides &amp; Tips
               </span>
             </h2>
 
             {/* Decorative line */}
             <div className="mt-3 flex items-center gap-2">
-              <span className="h-[2px] w-8 bg-amber-600" />
+              <span className="h-[2px] w-8 bg-amber-700" />
 
               <span className="h-2 w-2 rotate-45 border border-amber-600 bg-white" />
 
-              <span className="h-[2px] w-8 bg-amber-600" />
+              <span className="h-[2px] w-8 bg-amber-700" />
             </div>
 
             {/* Description */}
@@ -89,9 +89,9 @@ export default function BlogSection() {
           </div>
 
           {/* Desktop CTA */}
-          <Link
+          <Link prefetch={false}
             href="/blog"
-            className="group hidden shrink-0 items-center gap-2 text-base font-semibold text-amber-600 transition hover:text-amber-700 md:inline-flex"
+            className="group hidden shrink-0 items-center gap-2 text-base font-semibold text-amber-700 transition hover:text-amber-700 md:inline-flex"
           >
             View All Travel Guides
 
@@ -119,7 +119,7 @@ export default function BlogSection() {
                   IMAGE
               ================================================= */}
 
-              <Link
+              <Link prefetch={false}
                 href={`/${blog.slug}`}
                 className="relative block aspect-[4/3] overflow-hidden"
                 aria-label={`Read ${blog.title}`}
@@ -128,10 +128,11 @@ export default function BlogSection() {
                   src={blog.image}
                   alt={blog.alt}
                   fill
+                  quality={60}
                   sizes="
-                    (max-width: 768px) 100vw,
-                    (max-width: 1280px) 50vw,
-                    25vw
+                    (max-width: 768px) calc(100vw - 40px),
+                    (max-width: 1280px) 45vw,
+                    300px
                   "
                  
                   className="object-cover transition duration-500 group-hover:scale-105"
@@ -141,7 +142,7 @@ export default function BlogSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
 
                 {/* Category */}
-                <span className="absolute left-3 top-3 rounded-md bg-amber-600 px-3 py-1.5 text-sm font-semibold text-white shadow-sm">
+                <span className="absolute left-3 top-3 rounded-md bg-amber-700 px-3 py-1.5 text-sm font-semibold text-white shadow-sm">
                   {blog.category}
                 </span>
               </Link>
@@ -157,7 +158,7 @@ export default function BlogSection() {
 
                   <div className="flex items-center gap-1.5">
                     <CalendarDaysIcon
-                      className="h-4 w-4 text-amber-600"
+                      className="h-4 w-4 text-amber-700"
                       aria-hidden="true"
                     />
 
@@ -178,9 +179,9 @@ export default function BlogSection() {
 
                 {/* Title */}
                 <h3 className="mt-4 text-xl font-bold leading-7 text-slate-900">
-                  <Link
+                  <Link prefetch={false}
                     href={`/${blog.slug}`}
-                    className="transition hover:text-amber-600"
+                    className="transition hover:text-amber-700"
                   >
                     {blog.title}
                   </Link>
@@ -194,10 +195,10 @@ export default function BlogSection() {
                 <div className="flex-1" />
 
                 {/* Read more */}
-                <Link
+                <Link prefetch={false}
                   href={`/${blog.slug}`}
                   aria-label={`Read ${blog.title}`}
-                  className="group/read mt-5 inline-flex items-center gap-2 border-t border-gray-100 pt-4 text-base font-semibold text-amber-600 transition hover:text-amber-700"
+                  className="group/read mt-5 inline-flex items-center gap-2 border-t border-gray-100 pt-4 text-base font-semibold text-amber-700 transition hover:text-amber-700"
                 >
                   Read Travel Guide
 
@@ -223,28 +224,28 @@ export default function BlogSection() {
             Explore more:
           </span>
 
-          <Link
+          <Link prefetch={false}
             href="/marrakech-desert-tours"
             className="text-base font-medium text-amber-700 hover:text-amber-800"
           >
             Marrakech Desert Guide
           </Link>
 
-          <Link
+          <Link prefetch={false}
             href="/morocco-travel-tips"
             className="text-base font-medium text-amber-700 hover:text-amber-800"
           >
             Best Time to Visit Morocco
           </Link>
 
-          <Link
+          <Link prefetch={false}
             href="/destinations"
             className="text-base font-medium text-amber-700 hover:text-amber-800"
           >
             Places to Visit in Morocco
           </Link>
 
-          <Link
+          <Link prefetch={false}
             href="/locations/chefchaouen"
             className="text-base font-medium text-amber-700 hover:text-amber-800"
           >
@@ -258,9 +259,9 @@ export default function BlogSection() {
         ===================================================== */}
 
         <div className="mt-8 flex justify-center md:hidden">
-          <Link
+          <Link prefetch={false}
             href="/blog"
-            className="group inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-amber-600 px-6 text-base font-semibold text-white transition hover:bg-amber-700"
+            className="group inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-amber-700 px-6 text-base font-semibold text-white transition hover:bg-amber-800"
           >
             View All Travel Guides
 

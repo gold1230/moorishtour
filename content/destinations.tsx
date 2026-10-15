@@ -6,7 +6,7 @@ import {
   MapPinIcon,
 } from "@heroicons/react/24/solid";
 
-import Abdou from "@/public/abdou-faiz-mBo2EUfJ7sY-unsplash.jpg";
+import Abdou from "@/public/abdou-faiz-morocco-destinations.webp";
 
 import { getDestinations } from "@/data/destinationFilter";
 
@@ -40,8 +40,8 @@ export default function Destinations() {
         src={Abdou}
         alt=""
         fill
-        sizes="100vw"
-        quality={75}
+        sizes="(min-width: 640px) calc(100vw - 48px), 100vw"
+        quality={50}
         placeholder="blur"
         className="object-cover object-center"
         aria-hidden="true"
@@ -107,9 +107,9 @@ export default function Destinations() {
             </p>
 
             {/* CTA */}
-            <Link
+            <Link prefetch={false}
               href="/destinations"
-              className="group mt-7 inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-amber-600 px-6 text-base font-semibold text-white shadow-md transition duration-300 hover:-translate-y-0.5 hover:bg-amber-700"
+              className="group mt-7 inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-amber-700 px-6 text-base font-semibold text-white shadow-md transition duration-300 hover:-translate-y-0.5 hover:bg-amber-800"
             >
               Explore Morocco Destinations
 
@@ -131,7 +131,7 @@ export default function Destinations() {
                 key={place.id}
                 className="group"
               >
-                <Link
+                <Link prefetch={false}
                   href={place.href}
                   className="relative block h-65 overflow-hidden rounded-2xl border border-white/10 shadow-lg sm:h-72.5"
                   aria-label={`Explore ${place.name}, Morocco`}
@@ -141,10 +141,11 @@ export default function Destinations() {
                     src={place.image}
                     alt={place.alt}
                     fill
+                    quality={60}
                     sizes="
-                      (max-width: 640px) 50vw,
-                      (max-width: 1024px) 50vw,
-                      25vw
+                      (max-width: 640px) calc(50vw - 30px),
+                      (max-width: 1024px) 45vw,
+                      270px
                     "
                   
                     className="object-cover transition duration-500 group-hover:scale-105"
@@ -169,7 +170,7 @@ export default function Destinations() {
                       </h3>
 
                       {/* Arrow */}
-                      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-amber-600 text-white shadow-md transition duration-300 group-hover:translate-x-1 group-hover:bg-amber-500">
+                      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-amber-700 text-white shadow-md transition duration-300 group-hover:translate-x-1 group-hover:bg-amber-500">
                         <ArrowRightIcon
                           className="h-4 w-4"
                           aria-hidden="true"

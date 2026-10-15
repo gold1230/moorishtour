@@ -81,7 +81,7 @@ export default function PopularTours() {
           <div className="max-w-3xl">
 
             {/* Small label */}
-            <p className="text-sm font-bold uppercase tracking-[0.14em] text-amber-600">
+            <p className="text-sm font-bold uppercase tracking-[0.14em] text-amber-700">
               Popular Tours From Marrakech
             </p>
 
@@ -91,18 +91,18 @@ export default function PopularTours() {
               className="mt-2 text-3xl font-bold leading-tight text-slate-900 sm:text-4xl"
             >
               Popular{" "}
-              <span className="text-amber-600">
+              <span className="text-amber-700">
                 Morocco Tours
               </span>
             </h2>
 
             {/* Decorative line */}
             <div className="mt-3 flex items-center gap-2">
-              <span className="h-0.5 w-8 bg-amber-600" />
+              <span className="h-0.5 w-8 bg-amber-700" />
 
               <span className="h-2 w-2 rotate-45 border border-amber-600 bg-white" />
 
-              <span className="h-0.5 w-8 bg-amber-600" />
+              <span className="h-0.5 w-8 bg-amber-700" />
             </div>
 
             {/* Description */}
@@ -115,9 +115,9 @@ export default function PopularTours() {
           </div>
 
           {/* Desktop View All */}
-          <Link
+          <Link prefetch={false}
             href="/tour"
-            className="group hidden shrink-0 items-center gap-2 text-base font-semibold text-amber-600 transition hover:text-amber-700 md:inline-flex"
+            className="group hidden shrink-0 items-center gap-2 text-base font-semibold text-amber-700 transition hover:text-amber-700 md:inline-flex"
           >
             View All Morocco Tours
 
@@ -143,7 +143,7 @@ export default function PopularTours() {
               {/* =================================================
                   IMAGE
               ================================================= */}
-              <Link
+              <Link prefetch={false}
                 href={getTourHref(tour.slug)}
                 className="relative block aspect-4/3 overflow-hidden"
                 aria-label={`View ${tour.title}`}
@@ -152,10 +152,11 @@ export default function PopularTours() {
                   src={getTourImage(tour.image, "card")}
                   alt={tour.alt}
                   fill
+                  quality={60}
                   sizes="
-                    (max-width: 640px) 100vw,
-                    (max-width: 1280px) 50vw,
-                    25vw
+                    (max-width: 640px) calc(100vw - 40px),
+                    (max-width: 1280px) 45vw,
+                    300px
                   "
                   
                   className="object-cover transition duration-500 group-hover:scale-105"
@@ -166,7 +167,7 @@ export default function PopularTours() {
 
                 {/* Badge */}
                 {tour.badge && (
-                  <span className="absolute left-3 top-3 rounded-md bg-amber-600 px-3 py-1.5 text-xs font-bold uppercase tracking-wide text-white shadow-sm">
+                  <span className="absolute left-3 top-3 rounded-md bg-amber-700 px-3 py-1.5 text-xs font-bold uppercase tracking-wide text-white shadow-sm">
                     {tour.badge}
                   </span>
                 )}
@@ -174,7 +175,7 @@ export default function PopularTours() {
                 {/* Duration */}
                 <span className="absolute bottom-3 left-3 inline-flex items-center gap-1.5 rounded-md bg-white/95 px-3 py-1.5 text-sm font-semibold text-slate-900 shadow-sm backdrop-blur">
                   <ClockIcon
-                    className="h-4 w-4 text-amber-600"
+                    className="h-4 w-4 text-amber-700"
                     aria-hidden="true"
                   />
 
@@ -199,9 +200,9 @@ export default function PopularTours() {
 
                 {/* Title */}
                 <h3 className="mt-3 text-xl font-bold leading-7 text-slate-900">
-                  <Link
+                  <Link prefetch={false}
                     href={getTourHref(tour.slug)}
-                    className="transition hover:text-amber-600"
+                    className="transition hover:text-amber-700"
                   >
                     {tour.title}
                   </Link>
@@ -220,6 +221,7 @@ export default function PopularTours() {
 
                   <div
                     className="flex items-center gap-1"
+                    role="img"
                     aria-label={`${tour.rating} out of 5 stars`}
                   >
                     <StarIcon
@@ -246,14 +248,15 @@ export default function PopularTours() {
                       Price
                     </span>
 
-                    <span className="text-base font-bold text-amber-600">
+                    <span className="text-base font-bold text-amber-700">
                       {getTourPrice(tour.price, tour.currency, tour.priceFrom)}
                     </span>
                   </div>
 
-                  <Link
+                  <Link prefetch={false}
                     href={getTourHref(tour.slug)}
-                    className="group/link inline-flex items-center gap-1.5 text-base font-semibold text-slate-900 transition hover:text-amber-600"
+                    aria-label={`View ${tour.title}`}
+                    className="group/link inline-flex items-center gap-1.5 text-base font-semibold text-slate-900 transition hover:text-amber-700"
                   >
                     View Tour
 
@@ -275,9 +278,9 @@ export default function PopularTours() {
             MOBILE VIEW ALL
         ===================================================== */}
         <div className="mt-8 flex justify-center md:hidden">
-          <Link
+          <Link prefetch={false}
             href="/tour"
-            className="group inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-amber-600 px-6 text-base font-semibold text-white shadow-sm transition hover:bg-amber-700"
+            className="group inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-amber-700 px-6 text-base font-semibold text-white shadow-sm transition hover:bg-amber-800"
           >
             View All Morocco Tours
 

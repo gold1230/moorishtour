@@ -1,9 +1,9 @@
 import Link from "next/link";
-import PlaceHoverCard from "@/Compentents/placeCard";
-import {SectionFrame,InfoPanel,FeatureCards,Checklist,Timeline,QuotePanel,CompareTable,ArticleCTA} from "./ArticleElements";
-import ArticlePhoto from "./ArticlePhoto";
-import {tables} from "./tables";
-import {faqs} from "./faqData";
+
+import { SectionFrame, ArticleCTA } from "./ArticleElements";
+
+
+
 export default function Section23(){return <SectionFrame id="book-marrakech-tour-moorish-tour" index={23} label="YOUR NEXT STEP" title="Plan Your Marrakech Tour with Moorish Tour">
 <p className="mt-5 text-[17px] leading-8 text-slate-700">Whether you want a morning in the medina or a longer journey across the Atlas Mountains toward the Sahara, begin with a few clear details. Tell us your preferred dates, departure city, number of travelers, trip length and most important interests. A good route should fit your real schedule rather than simply look exciting on a list.</p>
 <p className="mt-5 text-[17px] leading-8 text-slate-700">If you are planning your first visit, consider giving Marrakech one or two days before a longer road trip. If you have only three days altogether, choose between a city-focused break and a demanding desert journey. If you have a week or more, there is room to combine culture, landscapes and quieter moments. These are different holidays, and each can be excellent when planned for the right traveler.</p>

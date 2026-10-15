@@ -1,9 +1,9 @@
-import Link from "next/link";
-import PlaceHoverCard from "@/Compentents/placeCard";
-import {SectionFrame,InfoPanel,FeatureCards,Checklist,Timeline,QuotePanel,CompareTable,ArticleCTA} from "./ArticleElements";
+
+
+import { SectionFrame } from "./ArticleElements";
 import ArticlePhoto from "./ArticlePhoto";
-import {tables} from "./tables";
-import {faqs} from "./faqData";
+
+
 export default function Section9(){return <SectionFrame id="ait-ben-haddou-southern-kasbah-routes" index={9} label="CULTURE ON THE ROAD" title="Ait Ben Haddou, Ouarzazate and the Southern Kasbah Route">
 <p className="mt-5 text-[17px] leading-8 text-slate-700">One reason Marrakech desert tours are memorable is the journey between the city and the dunes. Ait Ben Haddou is a historic earthen ksar that rises above a valley. Walking through its lanes gives you a sense of traditional architecture and its connection to earlier trading routes. If you enjoy history, this can be much more than a quick photo stop.</p>
 <p className="mt-5 text-[17px] leading-8 text-slate-700">Ouarzazate and the surrounding landscapes bring a different atmosphere: wide skies, old fortified buildings, palm-lined valleys and places associated with filmmaking. On a guided journey, you may hear about the materials used to build kasbahs and why settlements developed near water and farming land. Make time for a walk rather than staying in the vehicle the whole day.</p>

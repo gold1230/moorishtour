@@ -27,7 +27,7 @@ export default function BannerHome() {
       <Image
         fill
         src={image1}
-        quality={70}
+        quality={60}
         sizes="100vw"
         alt="Travelers enjoying a Morocco Sahara Desert tour near the Merzouga dunes"
         priority
@@ -57,9 +57,9 @@ export default function BannerHome() {
 
           {/* Offer badge */}
           <div className="mb-5">
-            <Link
+            <Link prefetch={false}
               href="/morocco-tour-discount"
-              className="inline-flex items-center rounded-full border border-white/20 bg-amber-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-amber-700"
+              className="inline-flex items-center rounded-full border border-white/20 bg-amber-700 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-amber-800"
             >
               Save 20% on Your First Morocco Tour
               <ChevronRightIcon
@@ -142,9 +142,9 @@ export default function BannerHome() {
           <div className="mt-7 flex flex-wrap items-center gap-4">
 
             {/* Primary CTA */}
-            <Link
+            <Link prefetch={false}
               href="/marrakech-desert-tours"
-              className="group inline-flex h-12 items-center justify-center rounded-lg bg-amber-600 px-6 text-base font-semibold text-white shadow-lg transition duration-300 hover:-translate-y-0.5 hover:bg-amber-700"
+              className="group inline-flex h-12 items-center justify-center rounded-lg bg-amber-700 px-6 text-base font-semibold text-white shadow-lg transition duration-300 hover:-translate-y-0.5 hover:bg-amber-800"
             >
               Explore Marrakech Desert Tours
 
@@ -155,7 +155,7 @@ export default function BannerHome() {
             </Link>
 
             {/* Secondary CTA */}
-            <Link
+            <Link prefetch={false}
               href="/plan-your-morocco-tour"
               className="group inline-flex h-12 items-center justify-center rounded-lg border border-white/60 bg-white/10 px-6 text-base font-semibold text-white backdrop-blur-sm transition duration-300 hover:bg-white hover:text-slate-900"
             >
@@ -170,21 +170,21 @@ export default function BannerHome() {
 
           {/* Small intent links */}
           <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-sm">
-            <Link
+            <Link prefetch={false}
               href="/private-morocco-tours"
               className="font-medium text-white/80 underline-offset-4 transition hover:text-amber-300 hover:underline"
             >
               Private Morocco Tours
             </Link>
 
-            <Link
+            <Link prefetch={false}
               href="/small-morocco-shared-tours"
               className="font-medium text-white/80 underline-offset-4 transition hover:text-amber-300 hover:underline"
             >
               Small Group Tours
             </Link>
 
-            <Link
+            <Link prefetch={false}
               href="/morocco-desert-tours"
               className="font-medium text-white/80 underline-offset-4 transition hover:text-amber-300 hover:underline"
             >
@@ -211,7 +211,7 @@ export default function BannerHome() {
 
             {/* Best Price */}
             <div className="flex items-center gap-3 border-b border-white/10 px-5 py-4 sm:border-r lg:border-b-0">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-amber-600">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-amber-700">
                 <CreditCardIcon
                   className="h-5 w-5 text-white"
                   aria-hidden="true"
@@ -231,7 +231,7 @@ export default function BannerHome() {
 
             {/* Local Guides */}
             <div className="flex items-center gap-3 border-b border-white/10 px-5 py-4 lg:border-b-0 lg:border-r">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-amber-600">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-amber-700">
                 <MegaphoneIcon
                   className="h-5 w-5 text-white"
                   aria-hidden="true"
@@ -251,7 +251,7 @@ export default function BannerHome() {
 
             {/* Private / Small groups */}
             <div className="flex items-center gap-3 border-b border-white/10 px-5 py-4 sm:border-r sm:border-b-0">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-amber-600">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-amber-700">
                 <UserGroupIcon
                   className="h-5 w-5 text-white"
                   aria-hidden="true"
@@ -271,7 +271,7 @@ export default function BannerHome() {
 
             {/* Support */}
             <div className="flex items-center gap-3 px-5 py-4">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-amber-600">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-amber-700">
                 <LifebuoyIcon
                   className="h-5 w-5 text-white"
                   aria-hidden="true"

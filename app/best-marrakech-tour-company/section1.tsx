@@ -1,9 +1,9 @@
 import Link from "next/link";
 import PlaceHoverCard from "@/Compentents/placeCard";
-import {SectionFrame,InfoPanel,FeatureCards,Checklist,Timeline,QuotePanel,CompareTable,ArticleCTA} from "./ArticleElements";
+import { SectionFrame, InfoPanel } from "./ArticleElements";
 import ArticlePhoto from "./ArticlePhoto";
-import {tables} from "./tables";
-import {faqs} from "./faqData";
+
+
 export default function Section1(){return <SectionFrame id="best-marrakech-tour-company-guide" index={1} label="START HERE" title="What Makes a Great Marrakech Tour Company?">
 <div className="rounded-2xl border border-amber-200 bg-gradient-to-br from-[#fff8ed] to-white p-6 sm:p-8"><p className="text-xs font-bold uppercase tracking-widest text-amber-800">A practical Marrakech travel guide</p><p className="mt-3 text-lg font-bold leading-8 text-[#102043]">Local tours, clear planning and beautiful journeys—without the rushed schedules or confusing promises.</p><div className="mt-5 grid grid-cols-3 gap-2 border-t border-amber-200 pt-5 text-center"><div><p className="text-xl font-extrabold text-[#102043]">City</p><p className="text-xs text-slate-600">culture</p></div><div><p className="text-xl font-extrabold text-[#102043]">Atlas</p><p className="text-xs text-slate-600">nature</p></div><div><p className="text-xl font-extrabold text-[#102043]">Sahara</p><p className="text-xs text-slate-600">adventure</p></div></div></div>
 <p className="mt-5 text-[17px] leading-8 text-slate-700">A good <PlaceHoverCard place="marrakech">Marrakech</PlaceHoverCard> tour company does more than arrange a car and tell you which attractions to visit. It listens to your plans, explains what is possible in the time you have, and makes the journey feel easy from your first message to your final transfer. In a city full of movement, colorful streets and interesting places, that kind of local planning can make a real difference.</p>

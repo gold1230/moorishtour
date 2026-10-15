@@ -1,7 +1,7 @@
-import Image from "next/image";
+
 import Link from "next/link";
 import PlaceHoverCard from "@/Compentents/placeCard";
-import MarrakechToFes4DayHero from "@/public/tours/related/4-days-tour-from-marrakech-to-fes.jpg";
+
 
 /** Private and Small Group Guided Tours in Morocco — server-rendered article content. */
 export default function Section2() {

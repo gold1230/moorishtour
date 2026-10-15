@@ -1,9 +1,9 @@
 import Link from "next/link";
-import PlaceHoverCard from "@/Compentents/placeCard";
-import {SectionFrame,InfoPanel,FeatureCards,Checklist,Timeline,QuotePanel,CompareTable,ArticleCTA} from "./ArticleElements";
+
+import { SectionFrame, FeatureCards } from "./ArticleElements";
 import ArticlePhoto from "./ArticlePhoto";
-import {tables} from "./tables";
-import {faqs} from "./faqData";
+
+
 export default function Section14(){return <SectionFrame id="ten-day-morocco-itinerary-marrakech" index={14} label="SLOWER & DEEPER" title="Why a 10-Day Morocco Tour Can Feel Better">
 <p className="mt-5 text-[17px] leading-8 text-slate-700">Ten days give you something that short tours cannot always provide: breathing space. Instead of arriving late and leaving early from every town, you may have time for a full medina visit, a mountain walk, a desert sunrise and a quiet afternoon. You can include special interests without forcing them into the gaps between long drives.</p>
 <p className="mt-5 text-[17px] leading-8 text-slate-700">A typical longer route might begin with two days in Marrakech, move through the High Atlas and southern kasbah country, spend extra time around Merzouga and then continue north. Depending on the final airport, you could add Fes or choose more time in the south. The exact route should reflect your arrival and departure cities.</p>

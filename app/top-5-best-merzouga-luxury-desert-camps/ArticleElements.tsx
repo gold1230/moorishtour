@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import Image, { type StaticImageData } from "next/image";
-import Link from "next/link";
-import PlaceHoverCard from "@/Compentents/placeCard";
+
+
 
 export function ArticleSection({id,label,title,first=false,children}:{id:string;label:string;title:string;first?:boolean;children:ReactNode}) {
   return <section id={id} aria-labelledby={`${id}-heading`} className={`${first ? "" : "mt-14 border-t border-gray-200 pt-12"} scroll-mt-28`}>

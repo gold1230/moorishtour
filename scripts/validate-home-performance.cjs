@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+/* Keep the low-cost homepage delivery changes from regressing. */
+const fs = require("node:fs");
+const path = require("node:path");
+const root = path.join(__dirname, "..");
+function content(file) { return fs.readFileSync(path.join(root, file), "utf8"); }
+function assert(ok, message) { if (!ok) throw new Error(`Homepage performance: ${message}`); }
+
+const shell = content("Compentents/searchBox.tsx");
+assert(shell.includes('import("./searchBoxInteractive")'), "search must load its index on user interaction");
+assert(!shell.includes('from "@/data/'), "lightweight search shell must not import JSON indexes");
+assert(fs.existsSync(path.join(root,"Compentents/searchBoxInteractive.tsx")), "interactive search missing");
+assert(content("Compentents/headerAll.tsx").includes('dynamic(() => import("./header"))'), "route-specific header code splitting removed");
+assert(!content("Compentents/ScrollToTop.tsx").includes('"use client"'), "scroll control should not require hydration");
+assert(content("app/layout.tsx").includes('id="top"'), "scroll link target missing");
+const backdrop = path.join(root,"public/abdou-faiz-morocco-destinations.webp");
+assert(fs.existsSync(backdrop), "compressed destinations background missing");
+assert(fs.statSync(backdrop).size < 110000, "destinations background unexpectedly large");
+assert(content("content/destinations.tsx").includes("abdou-faiz-morocco-destinations.webp"), "destinations not using compressed background");
+const config = content("next.config.ts");
+assert(config.includes('formats: ["image/webp"]'), "WebP image delivery not configured");
+const packageJson = JSON.parse(content("package.json"));
+assert(packageJson.overrides?.["source-map-js"] === "1.2.2", "source-map-js security override missing");
+const lock = JSON.parse(content("package-lock.json"));
+assert(lock.packages?.["node_modules/source-map-js"]?.version === "1.2.2", "source-map-js lockfile version wrong");
+console.log("Homepage performance & security checks PASSED (lazy search, header split, image, scroll, lockfile).");

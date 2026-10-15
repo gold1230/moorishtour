@@ -4,15 +4,7 @@ import PlaceHoverCard from "@/Compentents/placeCard";
 
 import MarrakechToFes4DayHero from "@/public/tours/related/4-days-tour-from-marrakech-to-fes.jpg";
 
-import {
-  BuildingLibraryIcon,
-  CameraIcon,
-  ClockIcon,
-  GlobeEuropeAfricaIcon,
-  MapPinIcon,
-  SparklesIcon,
-  UsersIcon,
-} from "@heroicons/react/24/outline";
+import { BuildingLibraryIcon, ClockIcon, GlobeEuropeAfricaIcon, MapPinIcon, SparklesIcon, UsersIcon } from "@heroicons/react/24/outline";
 
 export default function FamilyOneDayTripSampleItinerariesSection() {
   return (

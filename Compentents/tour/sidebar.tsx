@@ -8,9 +8,9 @@ import {
   InformationCircleIcon,
 } from "@heroicons/react/24/solid";
 
-import ContactFormBooking from "@/Compentents/contact/ContactFormBooking";
+
 import MobileReservationButton from "./btuttonresirvation";
-import BookingForm from "@/Compentents/contact/ContactFormBooking";
+
 import BookingPopup from "../contact/booking";
 
 
@@ -37,7 +37,7 @@ export default function TourSidebar({ price }: { price: number }) {
             className="scroll-mt-24">
 
             <BookingPopup
-              startPrice={250}
+              startPrice={price}
               currency="€"
               priceUnit="per person"
             />

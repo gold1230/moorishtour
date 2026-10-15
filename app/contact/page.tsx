@@ -5,6 +5,7 @@ import MoroccoDestinations from "./destination";
 import MoroccoTripPlanningProcess from "./whathappen";
 import PopularMoroccoTours from "./populartour";
 import ContactPlanningFAQ from "./faqscontact";
+import SocialLinks from "@/Compentents/SocialLinks";
 
 export default function Contact() {
   return (
@@ -12,6 +13,7 @@ export default function Contact() {
       <ContactHero />
       <ContactPlanningSection />
       <ContactMoorishTour />
+      <SocialLinks variant="contact" />
       <MoroccoDestinations />
       <MoroccoTripPlanningProcess />
       <PopularMoroccoTours/>

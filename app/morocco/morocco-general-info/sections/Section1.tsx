@@ -1,4 +1,4 @@
-import Link from "next/link";
+
 import PlaceHoverCard from "@/Compentents/placeCard";
 
 export default function Section1() {

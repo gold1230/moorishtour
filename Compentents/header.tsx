@@ -129,7 +129,7 @@ export default function HeaderMain({ pathname }: Props) {
               LOGO
           ================================================= */}
 
-          <Link
+          <Link prefetch={false}
             href="/"
             className="shrink-0"
             aria-label="Moorish Tour home"
@@ -173,7 +173,7 @@ export default function HeaderMain({ pathname }: Props) {
                   ));
 
               return (
-                <Link
+                <Link prefetch={false}
                   key={item.name}
                   href={item.href}
                   className={`relative mx-1 px-4 py-2.5 text-sm font-semibold transition ${
@@ -204,7 +204,7 @@ export default function HeaderMain({ pathname }: Props) {
                 CTA
             ================================================= */}
 
-            <Link
+            <Link prefetch={false}
               href="/plan-your-morocco-tour"
               className={`ml-4 inline-flex h-11 items-center justify-center rounded-lg px-5 text-sm font-semibold transition ${
                 transparentHeader
@@ -252,7 +252,7 @@ export default function HeaderMain({ pathname }: Props) {
           {/* Mobile header */}
           <div className="flex h-18.5 items-center justify-between border-b border-white/10 px-5">
 
-            <Link
+            <Link prefetch={false}
               href="/"
               onClick={() =>
                 setMobileMenuOpen(false)
@@ -292,7 +292,7 @@ export default function HeaderMain({ pathname }: Props) {
                   ));
 
               return (
-                <Link
+                <Link prefetch={false}
                   key={item.name}
                   href={item.href}
                   onClick={() =>
@@ -310,7 +310,7 @@ export default function HeaderMain({ pathname }: Props) {
             })}
 
             {/* Mobile CTA */}
-            <Link
+            <Link prefetch={false}
               href="/plan-your-morocco-tour"
               onClick={() =>
                 setMobileMenuOpen(false)
@@ -322,10 +322,10 @@ export default function HeaderMain({ pathname }: Props) {
 
             {/* Contact */}
             <a
-              href="tel:+212612345678"
+              href="tel:+212628812520"
               className="mt-5 text-center text-base font-medium text-white/80 hover:text-white"
             >
-              +212 6 1234 5678
+              +212628812520
             </a>
           </div>
         </div>

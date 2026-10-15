@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import {TourPlannerComponentProps} from "./types";
 
 const travelStyles = [
@@ -28,9 +27,6 @@ export default function TourPreferences({
   value,
   onChange,
 }: TourPlannerComponentProps) {
-  const [travelStyle, setTravelStyle] = useState("");
-  const [accommodation, setAccommodation] = useState("");
-  const [tourPace, setTourPace] = useState("");
   
 
   return (
@@ -190,19 +186,19 @@ export default function TourPreferences({
       <input
         type="hidden"
         name="travelStyle"
-        value={travelStyle}
+        value={value.travelStyle}
       />
 
       <input
         type="hidden"
         name="accommodation"
-        value={accommodation}
+        value={value.accommodation}
       />
 
       <input
         type="hidden"
         name="tourPace"
-        value={tourPace}
+        value={value.tourPace}
       />
     </section>
   );

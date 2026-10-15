@@ -1,9 +1,9 @@
 import Link from "next/link";
-import PlaceHoverCard from "@/Compentents/placeCard";
-import {SectionFrame,InfoPanel,FeatureCards,Checklist,Timeline,QuotePanel,CompareTable,ArticleCTA} from "./ArticleElements";
-import ArticlePhoto from "./ArticlePhoto";
-import {tables} from "./tables";
-import {faqs} from "./faqData";
+
+import { SectionFrame, FeatureCards } from "./ArticleElements";
+
+
+
 export default function Section2(){return <SectionFrame id="why-choose-local-marrakech-tour-operator" index={2} label="WHY LOCAL MATTERS" title="Why Travel with a Local Marrakech Tour Operator?">
 <p className="mt-5 text-[17px] leading-8 text-slate-700">Local knowledge is useful in ways that are easy to miss when you are planning from far away. A guide can tell you which old-city entrance is best for your meeting point, how much time to allow at a palace and where to find a quiet break during a busy sightseeing day. On a road trip, a driver who knows the region can recommend sensible rest stops and adjust a plan when weather affects a mountain route.</p>
 <p className="mt-5 text-[17px] leading-8 text-slate-700">A local company also helps connect the different parts of a journey. You might need an airport pickup, a hotel in the medina, a city guide for one morning and a separate driver for a desert tour. When these arrangements are coordinated, you spend less time organizing transport and more time enjoying the places you came to see. Still, confirm which services are provided directly and which are booked through local partners.</p>

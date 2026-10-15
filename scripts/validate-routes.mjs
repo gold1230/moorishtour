@@ -69,7 +69,8 @@ for (const file of others) {
   if (content.includes("/blog/blog/") || content.includes("/tour/tour/")) errors.push(`Duplicate /blog/blog or /tour/tour in ${relative(root,file)}`);
   for (const match of content.matchAll(link)) {
     const dest = match[1];
-    if (dest.startsWith("/api/") || /\.(jpg|jpeg|svg|png|webp|pdf|gif)$/i.test(dest)) continue;
+    // Public files such as /llms.txt are assets, not App Router pages.
+    if (dest.startsWith("/api/") || existsSync(join(root, "public", dest.replace(/^\//, ""))) || /\.(jpg|jpeg|svg|png|webp|pdf|gif)$/i.test(dest)) continue;
     validRoute(dest, `Internal link ${relative(root, file)}`);
     report.staticLinksChecked++;
   }

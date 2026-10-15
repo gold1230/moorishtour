@@ -13,12 +13,12 @@ const infoCall =  [
         {
           icon: PhoneIcon,
           title: "Call Us",
-          value: "+212 661163564",
+          value: "+212628812520",
         },
         {
           icon: EnvelopeIcon,
           title: "Email Us",
-          value: "info@moorishtour.com",
+          value: "moorishtour@gmail.com",
         },
         {
           icon: MapPinIcon,
@@ -28,7 +28,7 @@ const infoCall =  [
         {
           icon: PhoneArrowUpRightIcon,
           title: "WhatsApp",
-          value: "+212 661163564",
+          value: "+212628812520",
         },
       ];
 

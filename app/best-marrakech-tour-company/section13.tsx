@@ -1,9 +1,9 @@
 import Link from "next/link";
 import PlaceHoverCard from "@/Compentents/placeCard";
-import {SectionFrame,InfoPanel,FeatureCards,Checklist,Timeline,QuotePanel,CompareTable,ArticleCTA} from "./ArticleElements";
+import { SectionFrame, Timeline } from "./ArticleElements";
 import ArticlePhoto from "./ArticlePhoto";
-import {tables} from "./tables";
-import {faqs} from "./faqData";
+
+
 export default function Section13(){return <SectionFrame id="seven-day-morocco-tour-from-marrakech" index={13} label="ONE-WEEK JOURNEY" title="A 7-Day Morocco Tour Starting in Marrakech">
 <p className="mt-5 text-[17px] leading-8 text-slate-700">Seven days open the door to a much broader experience. You could spend time in Marrakech, travel over the Atlas Mountains, explore old kasbah areas and visit the Sahara before finishing in another city. A well-designed route connects overnight stops in a sensible order. It does not try to include every major city on a map just because the names are popular.</p>
 <p className="mt-5 text-[17px] leading-8 text-slate-700">A one-way route from Marrakech toward Fes can be efficient if your arrival and departure flights support it. You can visit the southern valleys and Merzouga on the way north, then explore the medina of <PlaceHoverCard place="fes">Fes</PlaceHoverCard> at the end. If both flights are in Marrakech, you may prefer a round trip with fewer distant city stops. Travel days should always be compared with your actual flight times.</p>

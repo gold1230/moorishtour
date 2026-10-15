@@ -5,7 +5,7 @@
 import { useForm } from "react-hook-form";
 
 export default function ContactForm() {
-  const { register, handleSubmit, reset } = useForm<Record<string, string>>();
+  const { handleSubmit, reset } = useForm<Record<string, string>>();
 
   async function onSubmit(data: Record<string, string>) {
     await fetch("/api/contact", {

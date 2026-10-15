@@ -9,11 +9,14 @@
     "lint": "eslint app Compentents",
     "typecheck": "tsc --noEmit",
     "check:routes": "node scripts/validate-routes.mjs",
-    "check:deploy": "npm run lint -- --quiet && npm run check:next-exports && npm run check:routes && npm run check:source && npm run check:opengraph && npm run check:og-render",
+    "check:deploy": "npm run lint -- --quiet && npm run check:next-exports && npm run check:routes && npm run check:source && npm run check:opengraph && npm run check:og-render && npm run check:performance && npm run check:social && npm run check:security-ai",
     "check:next-exports": "node scripts/validate-next-exports.cjs",
     "check:opengraph": "node scripts/validate-opengraph-images.cjs",
     "check:source": "node scripts/validate-source.cjs",
-    "check:og-render": "node scripts/validate-opengraph-render.cjs"
+    "check:og-render": "node scripts/validate-opengraph-render.cjs",
+    "check:performance": "node scripts/validate-home-performance.cjs",
+    "check:social": "node scripts/validate-social-profiles.cjs",
+    "check:security-ai": "node scripts/validate-security-ai.cjs"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
@@ -34,5 +37,8 @@
     "eslint-config-next": "^16.3.8",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "overrides": {
+    "source-map-js": "1.2.2"
   }
 }

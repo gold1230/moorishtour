@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 
 import BannerHome from "@/content/bannerhome";
 import Card from "@/content/card";
@@ -52,9 +51,9 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: `${siteUrl}/images/marrakech-desert-tours-home.jpg`,
-        width: 1200,
-        height: 630,
+        url: `${siteUrl}/home/Group-of-tourists-in-Morocco-enjoying-a-Sahara-Desert-4x4-tour-near-the-Merzouga-sand-dunes.jpg`,
+        width: 1521,
+        height: 720,
         alt:
           "Marrakech desert tours and Morocco tours with Moorish Tour",
       },
@@ -62,6 +61,8 @@ export const metadata: Metadata = {
   },
 
   twitter: {
+    site: "@MoorishTours",
+    creator: "@MoorishTours",
     card: "summary_large_image",
 
     title:
@@ -71,7 +72,7 @@ export const metadata: Metadata = {
       "Explore Marrakech desert tours, tours from Marrakech and private Morocco tours with local experts.",
 
     images: [
-      `${siteUrl}/images/marrakech-desert-tours-home.jpg`,
+      `${siteUrl}/home/Group-of-tourists-in-Morocco-enjoying-a-Sahara-Desert-4x4-tour-near-the-Merzouga-sand-dunes.jpg`,
     ],
   },
 
@@ -82,43 +83,6 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "TravelAgency",
-
-    "@id": `${siteUrl}/#organization`,
-
-    name: "Moorish Tour",
-
-    url: siteUrl,
-
-    logo: `${siteUrl}/images/logo.png`,
-
-    description:
-      "Moorish Tour is a local Morocco tour operator based in Marrakech, offering private and small-group Morocco tours, Marrakech desert tours, Sahara Desert trips and customized itineraries.",
-
-    telephone: "+212661000064",
-
-    email: "moorishtour@gmail.com",
-
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Marrakech",
-      addressCountry: "MA",
-    },
-
-    areaServed: {
-      "@type": "Country",
-      name: "Morocco",
-    },
-
-    sameAs: [
-      // Add your real social profiles here
-      // "https://www.facebook.com/...",
-      // "https://www.instagram.com/...",
-    ],
-  };
-
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -133,19 +97,7 @@ export default function Home() {
       "@id": `${siteUrl}/#organization`,
     },
 
-    potentialAction: {
-      "@type": "SearchAction",
 
-      target: {
-        "@type": "EntryPoint",
-
-        urlTemplate:
-          `${siteUrl}/tour?search={search_term_string}`,
-      },
-
-      "query-input":
-        "required name=search_term_string",
-    },
   };
 
   return (
@@ -235,23 +187,10 @@ export default function Home() {
           STRUCTURED DATA
       ===================================================== */}
 
-      <Script
-        id="moorish-tour-organization-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
-            organizationSchema
-          ),
-        }}
-      />
-
-      <Script
-        id="moorish-tour-website-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
-            websiteSchema
-          ),
+          __html: JSON.stringify(websiteSchema).replace(/</g, "\\u003c"),
         }}
       />
 

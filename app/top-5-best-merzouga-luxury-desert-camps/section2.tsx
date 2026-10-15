@@ -1,10 +1,10 @@
-import { ArticleSection, ArticlePicture, TravelNote, TravelQuote, GuideTable, BulletList, FAQItems } from "./ArticleElements";
-import Link from "next/link";
-import PlaceHoverCard from "@/Compentents/placeCard";
-import CampImage from "@/public/blog/content/sahara-desert-camp-experience-near-erg-chebbi-dunes-merzouga.jpg";
-import SunsetCampImage from "@/public/blog/content/traditional-morocco-desert-camp-at-sunset-in-merzouga.jpg";
-import DunesImage from "@/public/blog/content/camel-riders-crossing-erg-chebbi-dunes-merzouga-morocco.jpg";
-import RoadImage from "@/public/blog/content/4x4-vehicle-exploring-desert-landscapes-around-merzouga-and-erg-chebbi.jpg";
+import { ArticleSection, TravelNote, GuideTable } from "./ArticleElements";
+
+
+
+
+
+
 export default function Section2() {
  return (
   <ArticleSection id="quick-comparison-the-five-luxury-desert-camps-in-merzouga" label="Choose your stay" title="Quick Comparison: The Five Luxury Desert Camps in Merzouga">

@@ -1,8 +1,8 @@
-import Link from "next/link";
-import PlaceHoverCard from "@/Compentents/placeCard";
-import {SectionFrame,InfoPanel,FeatureCards,Checklist,Timeline,QuotePanel,CompareTable,ArticleCTA} from "./ArticleElements";
-import ArticlePhoto from "./ArticlePhoto";
-import {tables} from "./tables";
+
+
+import { SectionFrame } from "./ArticleElements";
+
+
 import {faqs} from "./faqData";
 export default function Section22(){return <SectionFrame id="marrakech-tour-company-faq" index={22} label="FAST ANSWERS" title="Frequently Asked Questions About Marrakech Tour Companies">
 <p className="mt-5 text-[17px] leading-8 text-slate-700">These are the practical questions travelers often ask before booking a tour from Marrakech. The answers explain general planning choices; the final details always depend on your travel dates and the services listed in your quotation.</p>

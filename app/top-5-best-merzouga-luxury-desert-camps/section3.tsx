@@ -1,10 +1,10 @@
-import { ArticleSection, ArticlePicture, TravelNote, TravelQuote, GuideTable, BulletList, FAQItems } from "./ArticleElements";
-import Link from "next/link";
-import PlaceHoverCard from "@/Compentents/placeCard";
-import CampImage from "@/public/blog/content/sahara-desert-camp-experience-near-erg-chebbi-dunes-merzouga.jpg";
+import { ArticleSection, ArticlePicture } from "./ArticleElements";
+
+
+
 import SunsetCampImage from "@/public/blog/content/traditional-morocco-desert-camp-at-sunset-in-merzouga.jpg";
-import DunesImage from "@/public/blog/content/camel-riders-crossing-erg-chebbi-dunes-merzouga-morocco.jpg";
-import RoadImage from "@/public/blog/content/4x4-vehicle-exploring-desert-landscapes-around-merzouga-and-erg-chebbi.jpg";
+
+
 export default function Section3() {
  return (
   <ArticleSection id="1-desert-luxury-camp-dome-tents-and-private-sahara-comfort" label="Luxury camp number one" title="1. Desert Luxury Camp: Dome Tents and Private Sahara Comfort">

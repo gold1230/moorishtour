@@ -1,9 +1,9 @@
 import Link from "next/link";
-import PlaceHoverCard from "@/Compentents/placeCard";
-import {SectionFrame,InfoPanel,FeatureCards,Checklist,Timeline,QuotePanel,CompareTable,ArticleCTA} from "./ArticleElements";
-import ArticlePhoto from "./ArticlePhoto";
-import {tables} from "./tables";
-import {faqs} from "./faqData";
+
+import { SectionFrame, Timeline } from "./ArticleElements";
+
+
+
 export default function Section5(){return <SectionFrame id="one-day-marrakech-tour-ideas" index={5} label="ONE GOOD DAY" title="A Beautiful One-Day Marrakech Tour Without Rushing">
 <p className="mt-5 text-[17px] leading-8 text-slate-700">You do not need a crowded schedule to enjoy one day in Marrakech. Begin in the morning while the medina is waking up. A walk through the market streets is more pleasant before the hottest part of the day, and your guide can explain what is being made and sold rather than turning every shop into a sales pitch. Choose a palace or museum you really want to see and give it enough time.</p>
 <p className="mt-5 text-[17px] leading-8 text-slate-700">At lunchtime, step away from the busiest paths. A small restaurant or riad courtyard can be a lovely place to try a tagine, a fresh salad or a simple Moroccan meal. If food is your main interest, read our <Link href="/moroccan-food-tour-the-tasty-heart-of-morocco/" className="font-semibold text-amber-800 underline decoration-amber-300 underline-offset-4 transition hover:text-amber-950">Moroccan food tour guide</Link> before choosing your stops. The best day allows time to taste, observe and talk.</p>

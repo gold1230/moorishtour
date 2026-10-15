@@ -1,9 +1,9 @@
-import Link from "next/link";
-import PlaceHoverCard from "@/Compentents/placeCard";
-import {SectionFrame,InfoPanel,FeatureCards,Checklist,Timeline,QuotePanel,CompareTable,ArticleCTA} from "./ArticleElements";
-import ArticlePhoto from "./ArticlePhoto";
-import {tables} from "./tables";
-import {faqs} from "./faqData";
+
+
+import { SectionFrame, FeatureCards } from "./ArticleElements";
+
+
+
 export default function Section17(){return <SectionFrame id="marrakech-tours-for-couples-families-solo" index={17} label="WHO TRAVELS" title="Marrakech Tours for Couples, Families and Solo Travelers">
 <p className="mt-5 text-[17px] leading-8 text-slate-700">For couples, a thoughtful Marrakech tour may combine lively sightseeing with quieter experiences. A beautiful riad, a traditional cooking lesson or an evening on a rooftop can be just as memorable as a full-day excursion. If a desert camp is part of the dream, choose a route with enough nights to enjoy the landscape rather than spending most of the time rushing there and back.</p>
 <p className="mt-5 text-[17px] leading-8 text-slate-700">Families often need a different rhythm. Shorter walking visits, toilet breaks, room space and vehicle seating can matter more than the number of monuments. Ask in advance about child seats when needed, age-appropriate activities and any difficulties with long road journeys. Camel riding is optional; ask for an alternative for anyone who prefers not to ride.</p>

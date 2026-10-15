@@ -1,9 +1,9 @@
 import Link from "next/link";
 import PlaceHoverCard from "@/Compentents/placeCard";
-import {SectionFrame,InfoPanel,FeatureCards,Checklist,Timeline,QuotePanel,CompareTable,ArticleCTA} from "./ArticleElements";
+import { SectionFrame, CompareTable } from "./ArticleElements";
 import ArticlePhoto from "./ArticlePhoto";
 import {tables} from "./tables";
-import {faqs} from "./faqData";
+
 export default function Section7(){return <SectionFrame id="agafay-vs-sahara-marrakech" index={7} label="CHOOSE THE LANDSCAPE" title="Agafay Desert or Sahara Desert: Which Tour Is Right for You?">
 <p className="mt-5 text-[17px] leading-8 text-slate-700">This is one of the most important questions travelers ask a Marrakech tour company. Agafay is a rocky, dry landscape closer to the city. It can be a good choice for a short excursion with sunset views, a meal or an overnight stay, depending on the package. It is beautiful in its own way, but <strong className="font-bold text-[#102043]">Agafay is not the giant sandy dunes of the Sahara</strong>.</p>
 <p className="mt-5 text-[17px] leading-8 text-slate-700">The sweeping golden dunes near <PlaceHoverCard place="merzouga">Merzouga</PlaceHoverCard> are part of the Erg Chebbi area in southeastern Morocco. Reaching them from Marrakech requires a substantial road journey across the Atlas and southern valleys. A three-day tour is a popular minimum, but driving days are long. Four days or more allow more breathing space and are often more comfortable for families or photographers.</p>
