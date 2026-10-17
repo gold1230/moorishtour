@@ -104,12 +104,16 @@ export default function HeaderMain({ pathname }: Props) {
 
   const isHomepage = pathname === "/";
 
-  const transparentHeader =
-    isHomepage && !scrolled;
+  const transparentHeader = isHomepage && !scrolled;
+  // Keep the previous brown design on internal pages, but use the same
+  // mounted header instance for every page instead of swapping components.
+  const innerPage = !isHomepage;
 
   return (
     <header
-      className={`fixed left-0 top-0 z-100 w-full transition-transform duration-300 ${
+      className={`left-0 top-0 z-100 w-full transition-transform duration-300 ${
+        isHomepage || scrolled ? "fixed" : "relative"
+      } ${
         showNav || mobileMenuOpen
           ? "translate-y-0"
           : "-translate-y-full"
@@ -118,9 +122,13 @@ export default function HeaderMain({ pathname }: Props) {
       <nav
         aria-label="Main navigation"
         className={`transition-all duration-300 ${
-          transparentHeader
-            ? "border-b border-white/10 bg-transparent"
-            : "border-b border-gray-200/80 bg-white/95 shadow-sm backdrop-blur-xl"
+          innerPage
+            ? scrolled
+              ? "border-b border-white/10 bg-[#3c281f]/95 shadow-lg backdrop-blur-xl"
+              : "border-b border-white/10 bg-[#4a3024]"
+            : transparentHeader
+              ? "border-b border-white/10 bg-transparent"
+              : "border-b border-gray-200/80 bg-white/95 shadow-sm backdrop-blur-xl"
         }`}
       >
         <div className="mx-auto flex h-18.5 max-w-7xl items-center px-5 sm:px-7 lg:px-10">
@@ -129,12 +137,12 @@ export default function HeaderMain({ pathname }: Props) {
               LOGO
           ================================================= */}
 
-          <Link prefetch={false}
+          <Link 
             href="/"
             className="shrink-0"
             aria-label="Moorish Tour home"
           >
-            {transparentHeader ? (
+            {transparentHeader || innerPage ? (
               <Image
                 src={MoorishLogo}
                 alt="Moorish Tour Morocco"
@@ -173,11 +181,11 @@ export default function HeaderMain({ pathname }: Props) {
                   ));
 
               return (
-                <Link prefetch={false}
+                <Link 
                   key={item.name}
                   href={item.href}
                   className={`relative mx-1 px-4 py-2.5 text-sm font-semibold transition ${
-                    transparentHeader
+                    transparentHeader || innerPage
                       ? active
                         ? "text-amber-300"
                         : "text-white hover:text-amber-300"
@@ -204,7 +212,7 @@ export default function HeaderMain({ pathname }: Props) {
                 CTA
             ================================================= */}
 
-            <Link prefetch={false}
+            <Link 
               href="/plan-your-morocco-tour"
               className={`ml-4 inline-flex h-11 items-center justify-center rounded-lg px-5 text-sm font-semibold transition ${
                 transparentHeader
@@ -226,7 +234,7 @@ export default function HeaderMain({ pathname }: Props) {
               setMobileMenuOpen(true)
             }
             className={`ml-auto flex h-11 w-11 items-center justify-center rounded-lg transition lg:hidden ${
-              transparentHeader
+              transparentHeader || innerPage
                 ? "text-white hover:bg-white/10"
                 : "text-slate-900 hover:bg-gray-100"
             }`}
@@ -244,7 +252,7 @@ export default function HeaderMain({ pathname }: Props) {
 
       {mobileMenuOpen && (
         <div
-          className="fixed inset-0 z-110 bg-slate-950/95 backdrop-blur-xl lg:hidden"
+          className={`fixed inset-0 z-110 backdrop-blur-xl lg:hidden ${innerPage ? "bg-[#3c281f]/95" : "bg-slate-950/95"}`}
           role="dialog"
           aria-modal="true"
           aria-label="Mobile navigation"
@@ -252,7 +260,7 @@ export default function HeaderMain({ pathname }: Props) {
           {/* Mobile header */}
           <div className="flex h-18.5 items-center justify-between border-b border-white/10 px-5">
 
-            <Link prefetch={false}
+            <Link 
               href="/"
               onClick={() =>
                 setMobileMenuOpen(false)
@@ -281,7 +289,7 @@ export default function HeaderMain({ pathname }: Props) {
           </div>
 
           {/* Mobile links */}
-          <div className="flex flex-col px-5 py-8 bg-slate-950/95 ">
+          <div className={`flex flex-col px-5 py-8 ${innerPage ? "bg-[#3c281f]/95" : "bg-slate-950/95"}`}>
 
             {navigation.map((item) => {
               const active =
@@ -292,7 +300,7 @@ export default function HeaderMain({ pathname }: Props) {
                   ));
 
               return (
-                <Link prefetch={false}
+                <Link 
                   key={item.name}
                   href={item.href}
                   onClick={() =>
@@ -310,7 +318,7 @@ export default function HeaderMain({ pathname }: Props) {
             })}
 
             {/* Mobile CTA */}
-            <Link prefetch={false}
+            <Link 
               href="/plan-your-morocco-tour"
               onClick={() =>
                 setMobileMenuOpen(false)

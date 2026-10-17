@@ -1,17 +1,14 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import { usePathname } from "next/navigation";
+import HeaderMain from "./header";
 
-// Split the homepage and internal-page headers into separate route-specific chunks.
-const HeaderMain = dynamic(() => import("./header"));
-const HeaderTour = dynamic(() => import("./tour/header"));
-
+/**
+ * One persistent header for every route. The header changes colors/layout
+ * based on the pathname without unmounting and remounting a different
+ * component when visitors move between the homepage and a tour page.
+ */
 export default function HeaderAll() {
   const pathname = usePathname() || "/";
-  return pathname === "/" ? (
-    <HeaderMain pathname={pathname} />
-  ) : (
-    <HeaderTour pathname={pathname} />
-  );
+  return <HeaderMain pathname={pathname} />;
 }

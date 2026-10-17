@@ -57,7 +57,7 @@ export default function BannerHome() {
 
           {/* Offer badge */}
           <div className="mb-5">
-            <Link prefetch={false}
+            <Link 
               href="/morocco-tour-discount"
               className="inline-flex items-center rounded-full border border-white/20 bg-amber-700 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-amber-800"
             >
@@ -142,7 +142,7 @@ export default function BannerHome() {
           <div className="mt-7 flex flex-wrap items-center gap-4">
 
             {/* Primary CTA */}
-            <Link prefetch={false}
+            <Link 
               href="/marrakech-desert-tours"
               className="group inline-flex h-12 items-center justify-center rounded-lg bg-amber-700 px-6 text-base font-semibold text-white shadow-lg transition duration-300 hover:-translate-y-0.5 hover:bg-amber-800"
             >
@@ -155,7 +155,7 @@ export default function BannerHome() {
             </Link>
 
             {/* Secondary CTA */}
-            <Link prefetch={false}
+            <Link 
               href="/plan-your-morocco-tour"
               className="group inline-flex h-12 items-center justify-center rounded-lg border border-white/60 bg-white/10 px-6 text-base font-semibold text-white backdrop-blur-sm transition duration-300 hover:bg-white hover:text-slate-900"
             >
@@ -170,21 +170,21 @@ export default function BannerHome() {
 
           {/* Small intent links */}
           <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-sm">
-            <Link prefetch={false}
+            <Link 
               href="/private-morocco-tours"
               className="font-medium text-white/80 underline-offset-4 transition hover:text-amber-300 hover:underline"
             >
               Private Morocco Tours
             </Link>
 
-            <Link prefetch={false}
+            <Link 
               href="/small-morocco-shared-tours"
               className="font-medium text-white/80 underline-offset-4 transition hover:text-amber-300 hover:underline"
             >
               Small Group Tours
             </Link>
 
-            <Link prefetch={false}
+            <Link 
               href="/morocco-desert-tours"
               className="font-medium text-white/80 underline-offset-4 transition hover:text-amber-300 hover:underline"
             >

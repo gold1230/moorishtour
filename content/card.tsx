@@ -115,7 +115,7 @@ export default function PopularTours() {
           </div>
 
           {/* Desktop View All */}
-          <Link prefetch={false}
+          <Link 
             href="/tour"
             className="group hidden shrink-0 items-center gap-2 text-base font-semibold text-amber-700 transition hover:text-amber-700 md:inline-flex"
           >
@@ -143,7 +143,7 @@ export default function PopularTours() {
               {/* =================================================
                   IMAGE
               ================================================= */}
-              <Link prefetch={false}
+              <Link 
                 href={getTourHref(tour.slug)}
                 className="relative block aspect-4/3 overflow-hidden"
                 aria-label={`View ${tour.title}`}
@@ -200,7 +200,7 @@ export default function PopularTours() {
 
                 {/* Title */}
                 <h3 className="mt-3 text-xl font-bold leading-7 text-slate-900">
-                  <Link prefetch={false}
+                  <Link 
                     href={getTourHref(tour.slug)}
                     className="transition hover:text-amber-700"
                   >
@@ -253,7 +253,7 @@ export default function PopularTours() {
                     </span>
                   </div>
 
-                  <Link prefetch={false}
+                  <Link 
                     href={getTourHref(tour.slug)}
                     aria-label={`View ${tour.title}`}
                     className="group/link inline-flex items-center gap-1.5 text-base font-semibold text-slate-900 transition hover:text-amber-700"
@@ -278,7 +278,7 @@ export default function PopularTours() {
             MOBILE VIEW ALL
         ===================================================== */}
         <div className="mt-8 flex justify-center md:hidden">
-          <Link prefetch={false}
+          <Link 
             href="/tour"
             className="group inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-amber-700 px-6 text-base font-semibold text-white shadow-sm transition hover:bg-amber-800"
           >
