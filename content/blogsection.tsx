@@ -17,7 +17,7 @@ const blogs = getBlogs({
 
 
 
-import Abdou from "@/public/abdou-faiz-mBo2EUfJ7sY-unsplash - Card.jpg";
+
 
 /* =========================================================
    TYPES

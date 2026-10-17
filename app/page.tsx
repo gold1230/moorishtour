@@ -10,13 +10,15 @@ import BlogSection from "@/content/blogsection";
 import HomeTravelSearch from "@/Compentents/searchBox";
 
 const siteUrl = "https://moorishtour.com";
+const homeTitle = "Explore Morocco Tours & Marrakech Desert Tours with Moorish Tour";
+const homeDescription =
+  "Explore Morocco tours and Marrakech desert tours with local guides. Discover Sahara adventures, private itineraries and top places to visit in Morocco.";
+const homeImage = `${siteUrl}/home/Group-of-tourists-in-Morocco-enjoying-a-Sahara-Desert-4x4-tour-near-the-Merzouga-sand-dunes.jpg`;
 
 export const metadata: Metadata = {
-  title:
-    "Marrakech Desert Tours & Morocco Tours | Moorish Tour",
+  title: { absolute: homeTitle },
 
-  description:
-    "Discover Marrakech desert tours, tours from Marrakech and private Morocco tours with Moorish Tour, a local Morocco tour operator based in Marrakech.",
+  description: homeDescription,
 
   keywords: [
     "Marrakech desert tours",
@@ -35,11 +37,9 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title:
-      "Marrakech Desert Tours & Morocco Tours | Moorish Tour",
+    title: homeTitle,
 
-    description:
-      "Explore Marrakech desert tours, tours from Marrakech, Sahara Desert trips and private Morocco tours with local experts.",
+    description: homeDescription,
 
     url: siteUrl,
 
@@ -51,11 +51,11 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: `${siteUrl}/home/Group-of-tourists-in-Morocco-enjoying-a-Sahara-Desert-4x4-tour-near-the-Merzouga-sand-dunes.jpg`,
+        url: homeImage,
         width: 1521,
         height: 720,
         alt:
-          "Marrakech desert tours and Morocco tours with Moorish Tour",
+          "Travelers enjoying a Sahara Desert 4x4 adventure near the Merzouga dunes in Morocco",
       },
     ],
   },
@@ -65,14 +65,12 @@ export const metadata: Metadata = {
     creator: "@MoorishTours",
     card: "summary_large_image",
 
-    title:
-      "Marrakech Desert Tours & Morocco Tours | Moorish Tour",
+    title: homeTitle,
 
-    description:
-      "Explore Marrakech desert tours, tours from Marrakech and private Morocco tours with local experts.",
+    description: homeDescription,
 
     images: [
-      `${siteUrl}/home/Group-of-tourists-in-Morocco-enjoying-a-Sahara-Desert-4x4-tour-near-the-Merzouga-sand-dunes.jpg`,
+      homeImage,
     ],
   },
 
@@ -96,8 +94,29 @@ export default function Home() {
     publisher: {
       "@id": `${siteUrl}/#organization`,
     },
+  };
 
-
+  // Preferred search thumbnail: this is the same real photo used in the homepage hero.
+  // Keep the business logo in the TravelAgency schema for brand identification.
+  const homePageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${siteUrl}/#webpage`,
+    url: `${siteUrl}/`,
+    name: homeTitle,
+    description: homeDescription,
+    primaryImageOfPage: {
+      "@type": "ImageObject",
+      "@id": `${siteUrl}/#primaryimage`,
+      url: homeImage,
+      contentUrl: homeImage,
+      width: 1521,
+      height: 720,
+      caption: "Travelers on a guided Sahara Desert tour near Merzouga, Morocco",
+    },
+    isPartOf: { "@id": `${siteUrl}/#website` },
+    publisher: { "@id": `${siteUrl}/#organization` },
+    inLanguage: "en",
   };
 
   return (
@@ -190,7 +209,7 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(websiteSchema).replace(/</g, "\\u003c"),
+          __html: JSON.stringify([websiteSchema, homePageSchema]).replace(/</g, "\\u003c"),
         }}
       />
 

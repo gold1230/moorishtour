@@ -92,6 +92,10 @@
     "kind": "blog"
   },
   {
+    "path": "/errachidia-desert-tours",
+    "kind": "page"
+  },
+  {
     "path": "/explore-marrakech-tour-company",
     "kind": "blog"
   },
@@ -433,6 +437,10 @@
   },
   {
     "path": "/tour/3-days-tour-from-fes-to-merzouga-desert",
+    "kind": "tour"
+  },
+  {
+    "path": "/tour/3-days-tour-from-marrakech-to-merzouga",
     "kind": "tour"
   },
   {

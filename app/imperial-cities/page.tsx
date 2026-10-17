@@ -1,3 +1,4 @@
+import { absoluteSiteUrl } from "@/lib/absoluteSiteUrl";
 import type { Metadata } from "next";
 import { getDestinations } from "@/data/destinationFilter";
 
@@ -73,17 +74,14 @@ const imperialCityFaqs = [
   },
 ];
 
-function absoluteUrl(path: string) {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "");
-  return siteUrl ? `${siteUrl}${path}` : undefined;
-}
+
 
 export default function ImperialCitiesPage() {
   const cities = getDestinations({
     slugs: ["marrakech", "rabat", "meknes", "fes"],
   });
 
-  const pageUrl = absoluteUrl("/imperial-cities");
+  const pageUrl = absoluteSiteUrl("/imperial-cities");
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -107,7 +105,7 @@ export default function ImperialCitiesPage() {
         name: "Imperial Cities of Morocco",
         numberOfItems: cities.length,
         itemListElement: cities.map((city, index) => {
-          const url = absoluteUrl(city.href);
+          const url = absoluteSiteUrl(city.href);
 
           return {
             "@type": "ListItem",
@@ -128,13 +126,13 @@ export default function ImperialCitiesPage() {
             "@type": "ListItem",
             position: 1,
             name: "Home",
-            item: absoluteUrl("/") || "/",
+            item: absoluteSiteUrl("/"),
           },
           {
             "@type": "ListItem",
             position: 2,
             name: "Imperial Cities",
-            item: pageUrl || "/imperial-cities",
+            item: pageUrl,
           },
         ],
       },

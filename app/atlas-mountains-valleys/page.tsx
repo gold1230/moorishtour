@@ -1,3 +1,4 @@
+import { absoluteSiteUrl } from "@/lib/absoluteSiteUrl";
 import type { Metadata } from "next";
 import { getDestinations } from "@/data/destinationFilter";
 
@@ -75,10 +76,7 @@ const atlasFaqs = [
   },
 ];
 
-function absoluteUrl(path: string) {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "");
-  return siteUrl ? `${siteUrl}${path}` : undefined;
-}
+
 
 export default function AtlasMountainsValleysPage() {
   const destinations = getDestinations({
@@ -94,7 +92,7 @@ export default function AtlasMountainsValleysPage() {
     ],
   });
 
-  const pageUrl = absoluteUrl("/atlas-mountains-valleys");
+  const pageUrl = absoluteSiteUrl("/atlas-mountains-valleys");
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -121,7 +119,7 @@ export default function AtlasMountainsValleysPage() {
         name: "Atlas Mountains and Valley Destinations",
         numberOfItems: destinations.length,
         itemListElement: destinations.map((destination, index) => {
-          const url = absoluteUrl(destination.href);
+          const url = absoluteSiteUrl(destination.href);
 
           return {
             "@type": "ListItem",
@@ -142,13 +140,13 @@ export default function AtlasMountainsValleysPage() {
             "@type": "ListItem",
             position: 1,
             name: "Home",
-            item: absoluteUrl("/") || "/",
+            item: absoluteSiteUrl("/"),
           },
           {
             "@type": "ListItem",
             position: 2,
             name: "Atlas Mountains & Valleys",
-            item: pageUrl || "/atlas-mountains-valleys",
+            item: pageUrl,
           },
         ],
       },

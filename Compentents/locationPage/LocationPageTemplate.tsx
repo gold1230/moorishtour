@@ -1,3 +1,4 @@
+import { absoluteSiteUrl } from "@/lib/absoluteSiteUrl";
 import type { LocationPageData } from "@/lib/locationPageTypes";
 
 import LocationHero from "./LocationHero";
@@ -12,13 +13,10 @@ type Props = {
   location: LocationPageData;
 };
 
-function absoluteUrl(path: string) {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "");
-  return siteUrl ? `${siteUrl}${path}` : undefined;
-}
+
 
 export default function LocationPageTemplate({ location }: Props) {
-  const pageUrl = absoluteUrl(location.canonicalPath);
+  const pageUrl = absoluteSiteUrl(location.canonicalPath);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -42,19 +40,19 @@ export default function LocationPageTemplate({ location }: Props) {
             "@type": "ListItem",
             position: 1,
             name: "Home",
-            item: absoluteUrl("/") || "/",
+            item: absoluteSiteUrl("/"),
           },
           {
             "@type": "ListItem",
             position: 2,
             name: "Locations",
-            item: absoluteUrl("/locations") || "/locations",
+            item: absoluteSiteUrl("/locations"),
           },
           {
             "@type": "ListItem",
             position: 3,
             name: location.name,
-            item: pageUrl || location.canonicalPath,
+            item: pageUrl,
           },
         ],
       },

@@ -1,5 +1,5 @@
 import type { NextConfig } from "next";
-import { enforceTrustedTypes, securityPolicy, strictCspEnabled, trustedTypesReportOnly } from "./lib/securityPolicy";
+import { enforceTrustedTypes, reportTrustedTypes, securityPolicy, strictCspEnabled, trustedTypesReportOnly } from "./lib/securityPolicy";
 
 
 
@@ -21,7 +21,7 @@ const nextConfig: NextConfig = {
           key: "Content-Security-Policy",
           value: securityPolicy(undefined, process.env.NODE_ENV === "development"),
         }] : []),
-        ...(!enforceTrustedTypes ? [{
+        ...(!enforceTrustedTypes && reportTrustedTypes ? [{
           key: "Content-Security-Policy-Report-Only",
           value: trustedTypesReportOnly,
         }] : []),

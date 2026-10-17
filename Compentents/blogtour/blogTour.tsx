@@ -8,7 +8,7 @@ import {
 } from "@heroicons/react/24/outline";
 
 import heroImage from "@/public/blog/banner/morocco-sahara-desert-tour-travelers-1439x520.webp";
-import authorImage from "@/public/abdou-faiz-mBo2EUfJ7sY-unsplash - Card.jpg";
+
 
 type BlogMetaInfo = {
   title: string;
@@ -109,7 +109,7 @@ export default function MarrakechMerzougaBlogHero({
                 <div className="flex items-center gap-3">
                   <div className="relative h-11 w-11 overflow-hidden rounded-full border-2 border-white shadow-sm">
                     <Image
-                      src={authorImage}
+                      src="/images/morocco-desert-author.jpg"
                       alt={metainfo.title}
                       fill
                       fetchPriority="high"

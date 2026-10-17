@@ -5,11 +5,18 @@
  */
 export const strictCspEnabled = process.env.MOORISH_STRICT_CSP === "1";
 export const enforceTrustedTypes = process.env.MOORISH_ENFORCE_TRUSTED_TYPES === "1";
+// Report-only Trusted Types is useful while auditing browser-side scripts,
+// but optional to avoid a flood of non-blocking console warnings.
+export const reportTrustedTypes = process.env.MOORISH_REPORT_TRUSTED_TYPES === "1";
 
 export function securityPolicy(nonce?: string, development = false): string {
+  // Cloudflare Web Analytics automatically injects its versioned beacon
+  // from static.cloudflareinsights.com when enabled in Cloudflare.
+  // NOTE: under strict nonce CSP, 'strict-dynamic' causes browsers to ignore
+  // hostname allowlists; that mode needs a nonce-aware analytics integration.
   const scripts = nonce
-    ? `script-src 'self' 'nonce-${nonce}' 'strict-dynamic' https://challenges.cloudflare.com${development ? " 'unsafe-eval'" : ""}`
-    : `script-src 'self' 'unsafe-inline' https://challenges.cloudflare.com${development ? " 'unsafe-eval'" : ""}`;
+    ? `script-src 'self' 'nonce-${nonce}' 'strict-dynamic' https://challenges.cloudflare.com https://static.cloudflareinsights.com${development ? " 'unsafe-eval'" : ""}`
+    : `script-src 'self' 'unsafe-inline' https://challenges.cloudflare.com https://static.cloudflareinsights.com${development ? " 'unsafe-eval'" : ""}`;
   return [
     "default-src 'self'",
     "base-uri 'self'",

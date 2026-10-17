@@ -1,3 +1,4 @@
+import { absoluteSiteUrl } from "@/lib/absoluteSiteUrl";
 import type { Metadata } from "next";
 import { getDestinations } from "@/data/destinationFilter";
 
@@ -76,17 +77,14 @@ const destinationFaqs = [
   },
 ];
 
-function absoluteUrl(path: string) {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "");
-  return siteUrl ? `${siteUrl}${path}` : undefined;
-}
+
 
 export default function DestinationsPage() {
   const destinations = getDestinations({
     sortBy: "name-asc",
   });
 
-  const pageUrl = absoluteUrl("/destinations");
+  const pageUrl = absoluteSiteUrl("/destinations");
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -113,7 +111,7 @@ export default function DestinationsPage() {
         name: "Best Places to Visit in Morocco",
         numberOfItems: destinations.length,
         itemListElement: destinations.map((destination, index) => {
-          const url = absoluteUrl(destination.href);
+          const url = absoluteSiteUrl(destination.href);
 
           return {
             "@type": "ListItem",
@@ -134,13 +132,13 @@ export default function DestinationsPage() {
             "@type": "ListItem",
             position: 1,
             name: "Home",
-            item: absoluteUrl("/") || "/",
+            item: absoluteSiteUrl("/"),
           },
           {
             "@type": "ListItem",
             position: 2,
             name: "Morocco Destinations",
-            item: pageUrl || "/destinations",
+            item: pageUrl,
           },
         ],
       },

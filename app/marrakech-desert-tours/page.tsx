@@ -1,3 +1,4 @@
+import Link from "next/link";
 import MoroccoToursHero from "@/Compentents/tourFrom/tourFrom"
 import PopularMoroccoTours from "@/Compentents/tourFrom/mustPopular";
 import  image1 from "@/public/plan/plan-your-morocco-tour-hero-extracted.jpg"
@@ -98,6 +99,24 @@ return (
       collection="tours-from-marrakech"
       title="Popular Morocco Tours From Marrakech"
     />
+
+    <section className="mx-auto max-w-7xl px-5 py-10 sm:px-8">
+      <div className="rounded-2xl border border-amber-100 bg-amber-50 p-6 sm:p-8">
+        <h2 className="text-2xl font-bold text-slate-900">
+          Planning a 3-Day Marrakech to Merzouga Tour?
+        </h2>
+        <p className="mt-3 max-w-3xl leading-7 text-slate-700">
+          See the full three-day Sahara itinerary, with stops at Ait Ben Haddou,
+          Dades Valley and Todra Gorge, plus a night near the Erg Chebbi dunes.
+        </p>
+        <Link
+          href="/tour/3-days-tour-from-marrakech-to-merzouga/"
+          className="mt-5 inline-flex min-h-11 items-center rounded-lg bg-amber-600 px-6 font-semibold text-white hover:bg-amber-700"
+        >
+          View 3 Days Marrakech to Merzouga Tour
+        </Link>
+      </div>
+    </section>
 
     <TopDestinations />
     <WhyTravelWithUs

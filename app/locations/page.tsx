@@ -1,3 +1,4 @@
+import { absoluteSiteUrl } from "@/lib/absoluteSiteUrl";
 import type { Metadata } from "next";
 import { getDestinations } from "@/data/destinationFilter";
 import { getTours } from "@/data/tourFilter";
@@ -42,10 +43,7 @@ export const metadata: Metadata = {
   },
 };
 
-function absoluteUrl(path: string) {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "");
-  return siteUrl ? `${siteUrl}${path}` : undefined;
-}
+
 
 export default function LocationsArchivePage() {
   const destinations = getDestinations({
@@ -57,7 +55,7 @@ export default function LocationsArchivePage() {
     limit: 6,
   });
 
-  const pageUrl = absoluteUrl("/locations");
+  const pageUrl = absoluteSiteUrl("/locations");
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -78,7 +76,7 @@ export default function LocationsArchivePage() {
         name: "Morocco Travel Locations",
         numberOfItems: destinations.length,
         itemListElement: destinations.map((destination, index) => {
-          const url = absoluteUrl(destination.href);
+          const url = absoluteSiteUrl(destination.href);
 
           return {
             "@type": "ListItem",
@@ -99,13 +97,13 @@ export default function LocationsArchivePage() {
             "@type": "ListItem",
             position: 1,
             name: "Home",
-            item: absoluteUrl("/") || "/",
+            item: absoluteSiteUrl("/"),
           },
           {
             "@type": "ListItem",
             position: 2,
             name: "Locations",
-            item: pageUrl || "/locations",
+            item: pageUrl,
           },
         ],
       },

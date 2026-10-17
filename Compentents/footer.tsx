@@ -26,6 +26,10 @@ const tourLinks = [
     href: "/morocco-fes-desert-tours",
   },
   {
+    label: "Errachidia Desert Tours",
+    href: "/errachidia-desert-tours",
+  },
+  {
     label: "Private Morocco Tours",
     href: "/private-morocco-tours",
   },

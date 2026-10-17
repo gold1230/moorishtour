@@ -1,3 +1,4 @@
+import { absoluteSiteUrl } from "@/lib/absoluteSiteUrl";
 import type { Metadata } from "next";
 import { getDestinations } from "@/data/destinationFilter";
 
@@ -77,10 +78,7 @@ const faqs = [
   },
 ];
 
-function absoluteUrl(path: string) {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "");
-  return siteUrl ? `${siteUrl}${path}` : undefined;
-}
+
 
 export default function AtlanticNorthernMoroccoPage() {
   const destinations = getDestinations({
@@ -96,7 +94,7 @@ export default function AtlanticNorthernMoroccoPage() {
     ],
   });
 
-  const pageUrl = absoluteUrl("/atlantic-northern-morocco");
+  const pageUrl = absoluteSiteUrl("/atlantic-northern-morocco");
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -124,7 +122,7 @@ export default function AtlanticNorthernMoroccoPage() {
         name: "Atlantic and Northern Morocco Destinations",
         numberOfItems: destinations.length,
         itemListElement: destinations.map((destination, index) => {
-          const url = absoluteUrl(destination.href);
+          const url = absoluteSiteUrl(destination.href);
 
           return {
             "@type": "ListItem",
@@ -145,13 +143,13 @@ export default function AtlanticNorthernMoroccoPage() {
             "@type": "ListItem",
             position: 1,
             name: "Home",
-            item: absoluteUrl("/") || "/",
+            item: absoluteSiteUrl("/"),
           },
           {
             "@type": "ListItem",
             position: 2,
             name: "Atlantic & Northern Morocco",
-            item: pageUrl || "/atlantic-northern-morocco",
+            item: pageUrl,
           },
         ],
       },

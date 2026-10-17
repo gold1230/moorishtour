@@ -1,3 +1,4 @@
+import { absoluteSiteUrl } from "@/lib/absoluteSiteUrl";
 import type { Metadata } from "next";
 
 import PrivateToursHero from "./PrivateToursHero"; 
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
     title: "Private Morocco Tours | Custom Morocco Trips",
     description:
       "Explore Morocco your way with a private driver, flexible itinerary, handpicked stays and custom desert experiences.",
-    url: "/private-morocco-tours",
+    url: absoluteSiteUrl("/private-morocco-tours"),
     type: "website",
   },
 };
@@ -72,7 +73,7 @@ const jsonLd = {
     {
       "@type": "CollectionPage",
       name: "Private Morocco Tours",
-      url: "/private-morocco-tours",
+      url: absoluteSiteUrl("/private-morocco-tours"),
       description:
         "Private Morocco tours with local drivers, flexible itineraries and custom routes through Morocco's cities, mountains and Sahara Desert.",
       about: [
@@ -91,13 +92,13 @@ const jsonLd = {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "/",
+          item: absoluteSiteUrl("/"),
         },
         {
           "@type": "ListItem",
           position: 2,
           name: "Private Morocco Tours",
-          item: "/private-morocco-tours",
+          item: absoluteSiteUrl("/private-morocco-tours"),
         },
       ],
     },
